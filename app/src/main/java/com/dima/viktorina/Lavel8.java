@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -30,7 +31,7 @@ public class Lavel8 extends AppCompatActivity {
     Array array = new Array();
     Random random = new Random(); //Переменная для генерации случайных чисел
     public int count = 0; //Счётчик правельных ответов
-
+    private TextView mTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class Lavel8 extends AppCompatActivity {
         //Путь к правому TextViev
         final TextView text_right = findViewById(R.id.text_right);
 
+        mTimer = (TextView)findViewById(R.id.tv);
 
         Button button_back = (Button) findViewById(R.id.button_back);
         button_back.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +126,18 @@ public class Lavel8 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     dialog.dismiss();
+                    new CountDownTimer(80000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                            mTimer.setText("Осталось времени: " + millisUntilFinished / 1000);
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            Intent intent = new Intent(Lavel8.this, GameLevels.class);
+                            startActivity(intent);finish();
+                        }
+                    }.start();
                 }catch (Exception e){
 
                 }
