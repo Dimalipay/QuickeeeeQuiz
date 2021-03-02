@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Viktorina</string>
+    <string name="start">Начать</string>
+    <string name="back">Назад</string>
+    <string name="lavel">Уровень:</string>
+    <string name="textcontinue">Продолжить</string>
+    <string name="close">Закрыть</string>
+    <string name="lavel1">Уровень 1</string>
+    <string name="lavel2">Уровень 2</string>
+    <string name="lavel3">Уровень 3</string>
+    <string name="lavel4">Уровень 4</string>
+    <string name="lavel5">Уровень 5</string>
+    <string name="lavel6">Уровень 6</string>
+    <string name="lavel7">Уровень 7</string>
+    <string name="lavel8">Уровень 8</string>
+</resources>
