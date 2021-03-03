@@ -239,5 +239,23 @@ public class Array {
             R.string.lvl8text17, R.string.lvl8text18, R.string.lvl8text19, R.string.lvl8text20,
             R.string.lvl8text21,
     };
+
+    final int[] images9 = {
+            R.drawable.lavel9_2000, R.drawable.lavel9_1971, R.drawable.lavel9_1957, R.drawable.lavel9_1937,
+            R.drawable.lavel9_1935, R.drawable.lavel9_1928, R.drawable.lavel9_1926, R.drawable.lavel9_1903,
+            R.drawable.lavel9_1896, R.drawable.lavel9_1892, R.drawable.lavel9_1889, R.drawable.lavel9_1888,
+            R.drawable.lavel9_1873, R.drawable.lavel9_1818, R.drawable.lavel9_1794, R.drawable.lavel9_1783,
+            R.drawable.lavel9_1770, R.drawable.lavel9_1752, R.drawable.lavel9_1701, R.drawable.lavel9_1609,
+            R.drawable.lavel9_1173,
+    };
+
+    final int[] text9 = {
+            R.string.lvl9text1, R.string.lvl9text2, R.string.lvl9text3, R.string.lvl9text4,
+            R.string.lvl9text5, R.string.lvl9text6, R.string.lvl9text7, R.string.lvl9text8,
+            R.string.lvl9text9, R.string.lvl9text10, R.string.lvl9text11, R.string.lvl9text12,
+            R.string.lvl9text13, R.string.lvl9text14, R.string.lvl9text15, R.string.lvl9text16,
+            R.string.lvl9text17, R.string.lvl9text18, R.string.lvl9text19, R.string.lvl9text20,
+            R.string.lvl9text21,
+    };
     //Массив для 8 уровня конец
 }

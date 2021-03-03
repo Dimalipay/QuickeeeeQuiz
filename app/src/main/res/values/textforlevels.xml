@@ -151,4 +151,26 @@
     <string name="lvl8text19">Соединённые Штаты Америки</string>
     <string name="lvl8text20">Индия</string>
     <string name="lvl8text21">Китай</string>
+
+    <string name="lvl9text1">Смартфон</string>
+    <string name="lvl9text2">Дискета</string>
+    <string name="lvl9text3">Спутник</string>
+    <string name="lvl9text4">Ракета</string>
+    <string name="lvl9text5">Компьютер</string>
+    <string name="lvl9text6">Телевизор</string>
+    <string name="lvl9text7">Колонки</string>
+    <string name="lvl9text8">Самолёт</string>
+    <string name="lvl9text9">Радио</string>
+    <string name="lvl9text10">Бумажные купюры</string>
+    <string name="lvl9text11">Эйфелева башня</string>
+    <string name="lvl9text12">Лодка</string>
+    <string name="lvl9text13">Лампочка</string>
+    <string name="lvl9text14">Велосипед</string>
+    <string name="lvl9text15">Двигателя внутреннего сгорания</string>
+    <string name="lvl9text16">Воздушный шар</string>
+    <string name="lvl9text17">Поезд</string>
+    <string name="lvl9text18">Солнечные очки</string>
+    <string name="lvl9text19">Самовар</string>
+    <string name="lvl9text20">Телескоп</string>
+    <string name="lvl9text21">Пизанская башня</string>
 </resources>
