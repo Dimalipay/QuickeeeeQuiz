@@ -243,10 +243,10 @@ public class Array {
     final int[] images9 = {
             R.drawable.lavel9_2000, R.drawable.lavel9_1971, R.drawable.lavel9_1957, R.drawable.lavel9_1937,
             R.drawable.lavel9_1935, R.drawable.lavel9_1928, R.drawable.lavel9_1926, R.drawable.lavel9_1903,
-            R.drawable.lavel9_1896, R.drawable.lavel9_1892, R.drawable.lavel9_1889, R.drawable.lavel9_1888,
-            R.drawable.lavel9_1873, R.drawable.lavel9_1818, R.drawable.lavel9_1794, R.drawable.lavel9_1783,
-            R.drawable.lavel9_1770, R.drawable.lavel9_1752, R.drawable.lavel9_1701, R.drawable.lavel9_1609,
-            R.drawable.lavel9_1173,
+            R.drawable.lavel9_1896, R.drawable.lavel9_1892, R.drawable.lavel9_1889, R.drawable.lavel9_1873,
+            R.drawable.lavel9_1818, R.drawable.lavel9_1794, R.drawable.lavel9_1783, R.drawable.lavel9_1770,
+            R.drawable.lavel9_1752, R.drawable.lavel9_1701, R.drawable.lavel9_1609, R.drawable.lavel9_1173,
+            R.drawable.lavel9_1888,
     };
 
     final int[] text9 = {
