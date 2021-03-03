@@ -126,7 +126,7 @@ public class Lavel8 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     dialog.dismiss();
-                    new CountDownTimer(80000, 1000) {
+                    new CountDownTimer(90000, 1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                             mTimer.setText("Осталось времени: " + millisUntilFinished / 1000);
