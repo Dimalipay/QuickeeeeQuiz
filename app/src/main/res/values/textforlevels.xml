@@ -163,14 +163,14 @@
     <string name="lvl9text9">Радио</string>
     <string name="lvl9text10">Бумажные купюры</string>
     <string name="lvl9text11">Эйфелева башня</string>
-    <string name="lvl9text12">Лодка</string>
+    <string name="lvl9text12">Велосипед</string>
     <string name="lvl9text13">Лампочка</string>
-    <string name="lvl9text14">Велосипед</string>
-    <string name="lvl9text15">Двигателя внутреннего сгорания</string>
-    <string name="lvl9text16">Воздушный шар</string>
-    <string name="lvl9text17">Поезд</string>
-    <string name="lvl9text18">Солнечные очки</string>
-    <string name="lvl9text19">Самовар</string>
-    <string name="lvl9text20">Телескоп</string>
-    <string name="lvl9text21">Пизанская башня</string>
+    <string name="lvl9text14">Двигатель внутреннего сгорания</string>
+    <string name="lvl9text15">Воздушный шар</string>
+    <string name="lvl9text16">Паровоз</string>
+    <string name="lvl9text17">Солнечные очки</string>
+    <string name="lvl9text18">Самовар</string>
+    <string name="lvl9text19">Телескоп</string>
+    <string name="lvl9text20">Пизанская башня</string>
+    <string name="lvl9text21">Лодка</string>
 </resources>
