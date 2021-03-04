@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +42,7 @@ public class Lavel9 extends AppCompatActivity {
     Random random = new Random(); //Переменная для генерации случайных чисел
     public int count = 0; //Счётчик правельных ответов
     private TextView mTimer;
-    private InterstitialAd interstitialAd;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,6 @@ public class Lavel9 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         //
-
         //
 
         //Создаём переменную text_levels
