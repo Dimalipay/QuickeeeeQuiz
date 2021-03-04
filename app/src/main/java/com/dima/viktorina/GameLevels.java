@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,12 +36,35 @@ public class GameLevels extends AppCompatActivity {
                     //Вызов диалогового окна
                     dialog = new Dialog(GameLevels.this); //Создаёт новое диалоговое окно
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //Скрываем шапку диалога
-                    dialog.setContentView(R.layout.dialog_warning); //Путь к макету
+                    dialog.setContentView(R.layout.dialog_prev); //Путь к макету
                     dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //Прозрачный фон диалогового окна
                     dialog.setCancelable(false); //Окно нельзя закрыть системными кнопками
 
+                    //Картинка для диалогового окна - начало
+                    ImageView imgprev = (ImageView)dialog.findViewById(R.id.imgprev);
+                    imgprev.setImageResource(R.drawable.warning_new);
+                    //Картинка для диалогового окна - конец
+
+                    LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
+                    dialogfon.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
+
+                    //Текст для диалогового окна - начало
+                    TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
+                    textdescription.setText(R.string.warning);
+                    //Текст дя диалогового окна - конец
+
                     //Кнопка закрытия диалогового окна - начало
-                    //pass
+                    TextView btncloce = (TextView)dialog.findViewById(R.id.btncloce);
+                    btncloce.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            try {
+                                dialog.dismiss();
+                            }catch (Exception e){
+
+                            }
+                        }
+                    });
                     //Кнопка закрытия диалогового окна - конец
 
                     //Кнопка "Продолжить" - начало
@@ -73,16 +98,38 @@ public class GameLevels extends AppCompatActivity {
                     //Вызов диалогового окна
                     dialog = new Dialog(GameLevels.this); //Создаёт новое диалоговое окно
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //Скрываем шапку диалога
-                    dialog.setContentView(R.layout.dialog_warning); //Путь к макету
+                    dialog.setContentView(R.layout.dialog_prev); //Путь к макету
                     dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //Прозрачный фон диалогового окна
                     dialog.setCancelable(false); //Окно нельзя закрыть системными кнопками
 
+                    //Картинка для диалогового окна - начало
+                    ImageView imgprev = (ImageView)dialog.findViewById(R.id.imgprev);
+                    imgprev.setImageResource(R.drawable.warning_new);
+                    //Картинка для диалогового окна - конец
+
+                    LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
+                    dialogfon.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
+
+                    //Текст для диалогового окна - начало
+                    TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
+                    textdescription.setText(R.string.warning);
+                    //Текст дя диалогового окна - конец
+
                     //Кнопка закрытия диалогового окна - начало
-                    //pass
+                    TextView btncloce = (TextView)dialog.findViewById(R.id.btncloce);
+                    btncloce.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            try {
+                                dialog.dismiss();
+                            }catch (Exception e){
+
+                            }
+                        }
+                    });
                     //Кнопка закрытия диалогового окна - конец
 
                     //Кнопка "Продолжить" - начало
-
                     Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
                     btncontinue.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -94,7 +141,6 @@ public class GameLevels extends AppCompatActivity {
                             }
                         }
                     });
-
                     //Кнопка "Продолжить" - конец
 
                     dialog.show(); //Показ окна

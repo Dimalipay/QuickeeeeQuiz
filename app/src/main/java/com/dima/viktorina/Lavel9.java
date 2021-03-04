@@ -1,5 +1,6 @@
 package com.dima.viktorina;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,7 +18,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.OnPaidEventListener;
+import com.google.android.gms.ads.ResponseInfo;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
 
 import java.util.Random;
 
@@ -32,11 +41,16 @@ public class Lavel9 extends AppCompatActivity {
     Random random = new Random(); //Переменная для генерации случайных чисел
     public int count = 0; //Счётчик правельных ответов
     private TextView mTimer;
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
+
+        //
+
+        //
 
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
@@ -119,6 +133,7 @@ public class Lavel9 extends AppCompatActivity {
         //Кнопка закрытия диалогового окна - конец
 
         //Кнопка "Продолжить" - начало
+
 
         Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
         btncontinue.setOnClickListener(new View.OnClickListener() {

@@ -5,6 +5,7 @@
     <string name="lavel">Уровень:</string>
     <string name="textcontinue">Продолжить</string>
     <string name="close">Закрыть</string>
+    <string name="warning">Данный уровень ещё находится в разработке. \nМы работаем над обновлениями и скоро его добавим</string>
     <string name="lavel1">Уровень 1</string>
     <string name="lavel2">Уровень 2</string>
     <string name="lavel3">Уровень 3</string>
