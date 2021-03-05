@@ -173,4 +173,25 @@
     <string name="lvl9text19">Телескоп</string>
     <string name="lvl9text20">Пизанская башня</string>
     <string name="lvl9text21">Лодка</string>
+
+    <string name="lvl10text1">Беларусь</string>
+    <string name="lvl10text2">Казахстан</string>
+    <string name="lvl10text3">Бельгия</string>
+    <string name="lvl10text4">Аргентина</string>
+    <string name="lvl10text5">Кипр</string>
+    <string name="lvl10text6">Армения</string>
+    <string name="lvl10text7">Венгрия</string>
+    <string name="lvl10text8">КНДР</string>
+    <string name="lvl10text9">Чехия</string>
+    <string name="lvl10text10">Катар</string>
+    <string name="lvl10text11">Мальта</string>
+    <string name="lvl10text12">Таджикистан</string>
+    <string name="lvl10text13">Нидерланды</string>
+    <string name="lvl10text14">Лихтенштейн</string>
+    <string name="lvl10text15">Люксембург</string>
+    <string name="lvl10text16">Сирия</string>
+    <string name="lvl10text17">Румыния</string>
+    <string name="lvl10text18">Таиланд</string>
+    <string name="lvl10text19">Германия</string>
+    <string name="lvl10text20">Турция</string>
 </resources>

@@ -42,8 +42,8 @@ public class GameLevels extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        TextView textView10 = (TextView) findViewById(R.id.textView10);
-        textView10.setOnClickListener(new View.OnClickListener() {
+        TextView textView11 = (TextView) findViewById(R.id.textView11);
+        textView11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -104,8 +104,8 @@ public class GameLevels extends AppCompatActivity {
             }
         });
 
-        TextView textView11 = (TextView) findViewById(R.id.textView11);
-        textView11.setOnClickListener(new View.OnClickListener() {
+        TextView textView12 = (TextView) findViewById(R.id.textView12);
+        textView12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -300,7 +300,7 @@ public class GameLevels extends AppCompatActivity {
         });
         //Кнопка 8 уровня - конец
 
-        //Кнопка 8 уровня - начало
+        //Кнопка 9 уровня - начало
         TextView textView9 = (TextView)findViewById(R.id.textView9);
         textView9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -313,7 +313,22 @@ public class GameLevels extends AppCompatActivity {
                 }
             }
         });
-        //Кнопка 8 уровня - конец
+        //Кнопка 9 уровня - конец
+
+        //Кнопка 10 уровня - начало
+        TextView textView10 = (TextView)findViewById(R.id.textView10);
+        textView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent10 = new Intent(GameLevels.this, Lavel9.class);
+                    startActivity(intent10); finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+        //Кнопка 10 уровня - конец
 
     }
     //Системная кнопка "Назад" - начало

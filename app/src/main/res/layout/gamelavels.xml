@@ -408,16 +408,15 @@
             android:background="@drawable/style_btn_main"
             android:text="@string/back" />
 
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-6157182552660079/6621617004">
-        </com.google.android.gms.ads.AdView>
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-6157182552660079/6621617004"></com.google.android.gms.ads.AdView>
 
 
     </LinearLayout>

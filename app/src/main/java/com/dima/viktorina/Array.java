@@ -239,7 +239,9 @@ public class Array {
             R.string.lvl8text17, R.string.lvl8text18, R.string.lvl8text19, R.string.lvl8text20,
             R.string.lvl8text21,
     };
+    //Массив для 8 уровня конец
 
+    //Массив для 9 уровня начало
     final int[] images9 = {
             R.drawable.lavel9_2000, R.drawable.lavel9_1971, R.drawable.lavel9_1957, R.drawable.lavel9_1937,
             R.drawable.lavel9_1935, R.drawable.lavel9_1928, R.drawable.lavel9_1926, R.drawable.lavel9_1903,
@@ -257,5 +259,58 @@ public class Array {
             R.string.lvl9text17, R.string.lvl9text18, R.string.lvl9text19, R.string.lvl9text20,
             R.string.lvl9text21,
     };
-    //Массив для 8 уровня конец
+    //Массив для 9 уровня конец
+
+    //Массив для 10 уровня начало
+    final int[] images10 = {
+            R.drawable.lavel10_belarus,
+            R.drawable.lavel10_kazachstan,
+            R.drawable.lavel10_belgium,
+            R.drawable.lavel10_argentina,
+            R.drawable.lavel10_cyprus,
+            R.drawable.lavel10_armenia,
+            R.drawable.lavel10_hungary,
+            R.drawable.lavel10_north_korea,
+            R.drawable.lavel10_czech,
+            R.drawable.lavel10_qatar,
+            R.drawable.lavel10_malta,
+            R.drawable.lavel10_tajikistan,
+            R.drawable.lavel10_netherlands,
+            R.drawable.lavel10_lichtenstein,
+            R.drawable.lavel10_luxembourg,
+            R.drawable.lavel10_syria,
+            R.drawable.lavel10_romania,
+            R.drawable.lavel10_thailand,
+            R.drawable.lavel10_germany,
+            R.drawable.lavel10_turkey,
+    };
+
+    final int[] text10 = {
+            R.string.lvl10text1,
+            R.string.lvl10text2,
+            R.string.lvl10text3,
+            R.string.lvl10text4,
+            R.string.lvl10text5,
+            R.string.lvl10text6,
+            R.string.lvl10text7,
+            R.string.lvl10text8,
+            R.string.lvl10text9,
+            R.string.lvl10text10,
+            R.string.lvl10text11,
+            R.string.lvl10text12,
+            R.string.lvl10text13,
+            R.string.lvl10text14,
+            R.string.lvl10text15,
+            R.string.lvl10text16,
+            R.string.lvl10text17,
+            R.string.lvl10text18,
+            R.string.lvl10text19,
+            R.string.lvl10text20,
+    };
+
+    final int[] strotg10 = {
+            1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+    };
+    //Массив для 10 уровня конец
+
 }
