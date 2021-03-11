@@ -19,30 +19,42 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+
 import java.util.Random;
 
-public class Lavel7 extends AppCompatActivity {
+public class Lavel11 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogExit;
+    private AdView adView;
 
     public int numLeft; //Переменная для левой части
     public int numRight; //Переменная для правой части
     Array array = new Array();
     Random random = new Random(); //Переменная для генерации случайных чисел
     public int count = 0; //Счётчик правельных ответов
-
     private TextView mTimer;
-
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
+        //Рекламный банер - начало
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-6157182552660079~8128665018");
+        adView = findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        //Рекламный банер - конец
+
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.lavel7); //Задали текст
+        text_levels.setText(R.string.lavel9); //Задали текст
 
         //Код для скругления углов у картинки
         final ImageView img_left = (ImageView) findViewById(R.id.img_left);
@@ -64,7 +76,7 @@ public class Lavel7 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Lavel7.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel11.this, GameLevels.class);
                     startActivity(intent); finish();
                 }catch (Exception e){
 
@@ -91,17 +103,15 @@ public class Lavel7 extends AppCompatActivity {
 
         //Картинка для диалогового окна - начало
         ImageView imgprev = (ImageView)dialog.findViewById(R.id.imgprev);
-        imgprev.setImageResource(R.drawable.img_prev_dialog7);
+        imgprev.setImageResource(R.drawable.img_prev_dialog11);
         //Картинка для диалогового окна - конец
 
-        //Фон для диалогового окна - начало
         LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
         dialogfon.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
-        //Фон для диалоговог оокна - конец
 
         //Текст для диалогового окна - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-        textdescription.setText(R.string.levelseven);
+        textdescription.setText(R.string.levelseleven);
         //Текст дя диалогового окна - конец
 
         //Кнопка закрытия диалогового окна - начало
@@ -111,7 +121,7 @@ public class Lavel7 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     //Возвращение к выбору уровня
-                    Intent intent = new Intent(Lavel7.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel11.this, GameLevels.class);
                     startActivity(intent); finish();
                 }catch (Exception e){
 
@@ -124,14 +134,14 @@ public class Lavel7 extends AppCompatActivity {
 
         //Кнопка "Продолжить" - начало
 
+
         Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
         btncontinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     dialog.dismiss();
-
-                    new CountDownTimer(60000, 1000) {
+                    new CountDownTimer(80000, 1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                             mTimer.setText("Осталось времени: " + millisUntilFinished / 1000);
@@ -139,7 +149,7 @@ public class Lavel7 extends AppCompatActivity {
 
                         @Override
                         public void onFinish() {
-                            Intent intent = new Intent(Lavel7.this, GameLevels.class);
+                            Intent intent = new Intent(Lavel11.this, GameLevels.class);
                             startActivity(intent);finish();
                         }
                     }.start();
@@ -161,11 +171,11 @@ public class Lavel7 extends AppCompatActivity {
         dialogExit.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         dialogExit.setCancelable(false); //Окно нельзя закрыть системными кнопками
 
-        LinearLayout dialogfonExit = (LinearLayout)dialogExit.findViewById(R.id.dialogfon_exit);
-        dialogfonExit.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
+        LinearLayout dialogfonexit =(LinearLayout)dialogExit.findViewById(R.id.dialogfon_exit);
+        dialogfonexit.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
 
         TextView textExit = (TextView)dialogExit.findViewById(R.id.dialogtextexit);
-        textExit.setText(R.string.dialogtextexit7);
+        textExit.setText(R.string.dialogtextexit11);
 
         //Кнопка закрытия диалогового окна - начало
 
@@ -175,7 +185,7 @@ public class Lavel7 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     //Возвращение к выбору уровня
-                    Intent intent = new Intent(Lavel7.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel11.this, GameLevels.class);
                     startActivity(intent); finish();
                 }catch (Exception e){
 
@@ -193,7 +203,7 @@ public class Lavel7 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent2 = new Intent(Lavel7.this, GameLevels.class);
+                    Intent intent2 = new Intent(Lavel11.this, GameLevels.class);
                     startActivity(intent2); finish();
                 }catch (Exception e){
 
@@ -215,23 +225,23 @@ public class Lavel7 extends AppCompatActivity {
         //Массив для заполнеия прогресса игры - конец
 
         //Подключаем анимацию - начало
-        final Animation a = AnimationUtils.loadAnimation(Lavel7.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Lavel11.this, R.anim.alpha);
         //Подключаем анимацию - конец
 
         //Для левой части
-        numLeft = random.nextInt(20); //Генерация случайных чисел от 1 до 20
-        img_left.setImageResource(array.images7[numLeft]); //Берём картинку из массива
-        text_left.setText(array.text7[numLeft]); //Берём из массива текст
+        numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
+        img_left.setImageResource(array.images11[numLeft]); //Берём картинку из массива
+        text_left.setText(array.text11[numLeft]); //Берём из массива текст
 
-        numRight = random.nextInt(20);
+        numRight = random.nextInt(21);
 
-        while (array.strotg[numLeft] == array.strotg[numRight]){
-            numRight = random.nextInt(20);
+        while (numLeft==numRight){
+            numRight = random.nextInt(21);
         }
 
         //Для правой части
-        img_right.setImageResource(array.images7[numRight]);
-        text_right.setText(array.text7[numRight]);
+        img_right.setImageResource(array.images11[numRight]);
+        text_right.setText(array.text11[numRight]);
 
         //Обрабатываем нажатие на левую картинку - начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -241,7 +251,7 @@ public class Lavel7 extends AppCompatActivity {
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
                     //Если коснулся картинки - начало
                    img_right.setEnabled(false); //Блокируем правую картинку что бы не допустить нажатия на обе сразу
-                   if (array.strotg[numLeft] > array.strotg[numRight]){
+                   if (numLeft > numRight){
                        img_left.setImageResource(R.drawable.lvl1true);
                    }else{
                        img_left.setImageResource(R.drawable.lvl1false);
@@ -249,7 +259,7 @@ public class Lavel7 extends AppCompatActivity {
                    //Если коснулся картинки конец
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
                     //Если отпустил палец - начало
-                    if (array.strotg[numLeft] > array.strotg[numRight]){
+                    if (numLeft > numRight){
                         //Если левая картинка больше
                         if (count < 20){
                           count = count + 1;
@@ -297,19 +307,21 @@ public class Lavel7 extends AppCompatActivity {
                         //Выход из уровня
                         dialogExit.show();
                     }else {
-                        numLeft = random.nextInt(20); //Генерация случайных чисел от 1 до 20
-                        img_left.setImageResource(array.images7[numLeft]); //Берём картинку из массива
-                        text_left.setText(array.text7[numLeft]); //Берём из массива текст
+                        numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
+                        img_left.setImageResource(array.images11[numLeft]); //Берём картинку из массива
+                        img_left.startAnimation(a);
+                        text_left.setText(array.text11[numLeft]); //Берём из массива текст
 
-                        numRight = random.nextInt(20);
+                        numRight = random.nextInt(21);
 
-                        while (array.strotg[numLeft] == array.strotg[numRight]){
-                            numRight = random.nextInt(20);
+                        while (numLeft==numRight){
+                            numRight = random.nextInt(21);
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images7[numRight]);
-                        text_right.setText(array.text7[numRight]);
+                        img_right.setImageResource(array.images11[numRight]);
+                        img_right.startAnimation(a);
+                        text_right.setText(array.text11[numRight]);
 
                         img_right.setEnabled(true);
                     }
@@ -330,7 +342,7 @@ public class Lavel7 extends AppCompatActivity {
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
                     //Если коснулся картинки - начало
                     img_left.setEnabled(false); //Блокируем лувую картинку что бы не допустить нажатия на обе сразу
-                    if (array.strotg[numLeft] < array.strotg[numRight]){
+                    if (numLeft < numRight){
                         img_right.setImageResource(R.drawable.lvl1true);
                     }else{
                         img_right.setImageResource(R.drawable.lvl1false);
@@ -338,7 +350,7 @@ public class Lavel7 extends AppCompatActivity {
                     //Если коснулся картинки конец
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
                     //Если отпустил палец - начало
-                    if (array.strotg[numLeft] < array.strotg[numRight]){
+                    if (numLeft < numRight){
                         //Если правая картинка больше
                         if (count < 20){
                             count = count + 1;
@@ -386,19 +398,21 @@ public class Lavel7 extends AppCompatActivity {
                         //Выход из уровня
                         dialogExit.show();
                     }else {
-                        numLeft = random.nextInt(20); //Генерация случайных чисел от 1 до 20
-                        img_left.setImageResource(array.images7[numLeft]); //Берём картинку из массива
-                        text_left.setText(array.text7[numLeft]); //Берём из массива текст
+                        numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
+                        img_left.setImageResource(array.images11[numLeft]); //Берём картинку из массива
+                        img_left.startAnimation(a);
+                        text_left.setText(array.text11[numLeft]); //Берём из массива текст
 
-                        numRight = random.nextInt(20);
+                        numRight = random.nextInt(21);
 
-                        while (array.strotg[numLeft] == array.strotg[numRight]){
-                            numRight = random.nextInt(20);
+                        while (numLeft==numRight){
+                            numRight = random.nextInt(21);
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images7[numRight]);
-                        text_right.setText(array.text7[numRight]);
+                        img_right.setImageResource(array.images11[numRight]);
+                        img_right.startAnimation(a);
+                        text_right.setText(array.text11[numRight]);
 
                         img_left.setEnabled(true);
                     }

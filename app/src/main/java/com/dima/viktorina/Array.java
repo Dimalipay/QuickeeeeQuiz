@@ -313,4 +313,23 @@ public class Array {
     };
     //Массив для 10 уровня конец
 
+    //Массив для 11 уровня начало
+    final int[] images11 = {
+            R.drawable.lavel11_ridddle, R.drawable.lavel11_badcomedian, R.drawable.lavel11_academeg, R.drawable.lavel11_klic_klac,
+            R.drawable.lavel11_navalny, R.drawable.lavel11_coffi_channel, R.drawable.lavel11_vdud, R.drawable.lavel11_wylsacom,
+            R.drawable.lavel11_kuplinov, R.drawable.lavel11_marmok, R.drawable.lavel11_eeoneguy, R.drawable.lavel11_ninja,
+            R.drawable.lavel11_mr_bean, R.drawable.lavel11_jacksepticeye, R.drawable.lavel11_markiplier, R.drawable.lavel11_a4,
+            R.drawable.lavel11_masha_and_the_bear, R.drawable.lavel11_fernanfloo, R.drawable.lavel11_mrbeast, R.drawable.lavel11_kids_diana_show,
+            R.drawable.lavel11_pewdiepie,
+    };
+
+    final int[] text11 = {
+            R.string.lvl11text1, R.string.lvl11text2, R.string.lvl11text3, R.string.lvl11text4,
+            R.string.lvl11text5, R.string.lvl11text6, R.string.lvl11text7, R.string.lvl11text8,
+            R.string.lvl11text9, R.string.lvl11text10, R.string.lvl11text11, R.string.lvl11text12,
+            R.string.lvl11text13, R.string.lvl11text14, R.string.lvl11text15, R.string.lvl11text16,
+            R.string.lvl11text17, R.string.lvl11text18, R.string.lvl11text19, R.string.lvl11text20,
+            R.string.lvl11text21,
+    };
+    //массив для 11 уровня конец
 }

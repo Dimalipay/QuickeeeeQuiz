@@ -276,8 +276,19 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Text right"/>
+
             </LinearLayout>
         </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-6157182552660079/6621617004"></com.google.android.gms.ads.AdView>
 
     </LinearLayout>
 
