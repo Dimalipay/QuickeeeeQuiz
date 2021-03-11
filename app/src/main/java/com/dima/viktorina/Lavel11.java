@@ -54,7 +54,7 @@ public class Lavel11 extends AppCompatActivity {
 
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.lavel9); //Задали текст
+        text_levels.setText(R.string.lavel11); //Задали текст
 
         //Код для скругления углов у картинки
         final ImageView img_left = (ImageView) findViewById(R.id.img_left);
@@ -141,7 +141,8 @@ public class Lavel11 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     dialog.dismiss();
-                    new CountDownTimer(80000, 1000) {
+
+                    /*new CountDownTimer(80000, 1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                             mTimer.setText("Осталось времени: " + millisUntilFinished / 1000);
@@ -152,7 +153,7 @@ public class Lavel11 extends AppCompatActivity {
                             Intent intent = new Intent(Lavel11.this, GameLevels.class);
                             startActivity(intent);finish();
                         }
-                    }.start();
+                    }.start();*/
                 }catch (Exception e){
 
                 }

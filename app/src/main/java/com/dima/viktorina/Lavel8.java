@@ -19,12 +19,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.Random;
 
 public class Lavel8 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogExit;
+    private AdView adView;
 
     public int numLeft; //Переменная для левой части
     public int numRight; //Переменная для правой части
@@ -37,6 +42,13 @@ public class Lavel8 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
+
+        //Рекламный банер - начало
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-6157182552660079~8128665018");
+        adView = findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        //Рекламный банер - конец
 
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
@@ -126,7 +138,8 @@ public class Lavel8 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     dialog.dismiss();
-                    new CountDownTimer(90000, 1000) {
+
+                    /*new CountDownTimer(90000, 1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                             mTimer.setText("Осталось времени: " + millisUntilFinished / 1000);
@@ -137,7 +150,7 @@ public class Lavel8 extends AppCompatActivity {
                             Intent intent = new Intent(Lavel8.this, GameLevels.class);
                             startActivity(intent);finish();
                         }
-                    }.start();
+                    }.start();*/
                 }catch (Exception e){
 
                 }

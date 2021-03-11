@@ -23,6 +23,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.OnPaidEventListener;
@@ -35,6 +37,7 @@ public class Lavel9 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogExit;
+    private AdView adView;
 
     public int numLeft; //Переменная для левой части
     public int numRight; //Переменная для правой части
@@ -49,8 +52,12 @@ public class Lavel9 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
-        //
-        //
+        //Рекламный банер - начало
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-6157182552660079~8128665018");
+        adView = findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        //Рекламный банер - конец
 
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
@@ -141,7 +148,8 @@ public class Lavel9 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     dialog.dismiss();
-                    new CountDownTimer(80000, 1000) {
+
+                    /*new CountDownTimer(80000, 1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                             mTimer.setText("Осталось времени: " + millisUntilFinished / 1000);
@@ -152,7 +160,7 @@ public class Lavel9 extends AppCompatActivity {
                             Intent intent = new Intent(Lavel9.this, GameLevels.class);
                             startActivity(intent);finish();
                         }
-                    }.start();
+                    }.start();*/
                 }catch (Exception e){
 
                 }
