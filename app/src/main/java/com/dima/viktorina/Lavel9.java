@@ -44,8 +44,9 @@ public class Lavel9 extends AppCompatActivity {
     Array array = new Array();
     Random random = new Random(); //Переменная для генерации случайных чисел
     public int count = 0; //Счётчик правельных ответов
+
     private TextView mTimer;
-    private InterstitialAd mInterstitialAd;
+    CountDownTimer cTimer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +86,9 @@ public class Lavel9 extends AppCompatActivity {
                 try {
                     Intent intent = new Intent(Lavel9.this, GameLevels.class);
                     startActivity(intent); finish();
+
+                    cTimer.cancel();
+
                 }catch (Exception e){
 
                 }
@@ -130,6 +134,9 @@ public class Lavel9 extends AppCompatActivity {
                     //Возвращение к выбору уровня
                     Intent intent = new Intent(Lavel9.this, GameLevels.class);
                     startActivity(intent); finish();
+
+                    cTimer.cancel();
+
                 }catch (Exception e){
 
                 }
@@ -149,18 +156,18 @@ public class Lavel9 extends AppCompatActivity {
                 try {
                     dialog.dismiss();
 
-                    /*new CountDownTimer(80000, 1000) {
-                        @Override
+                    cTimer = new CountDownTimer(90000, 1000) {
                         public void onTick(long millisUntilFinished) {
-                            mTimer.setText("Осталось времени: " + millisUntilFinished / 1000);
+                            mTimer.setText("Осталось времени: " + millisUntilFinished / 1000 + " секунд");
                         }
 
-                        @Override
                         public void onFinish() {
                             Intent intent = new Intent(Lavel9.this, GameLevels.class);
                             startActivity(intent);finish();
                         }
-                    }.start();*/
+                    };
+                    cTimer.start();
+
                 }catch (Exception e){
 
                 }
@@ -195,6 +202,9 @@ public class Lavel9 extends AppCompatActivity {
                     //Возвращение к выбору уровня
                     Intent intent = new Intent(Lavel9.this, GameLevels.class);
                     startActivity(intent); finish();
+
+                    cTimer.cancel();
+
                 }catch (Exception e){
 
                 }
@@ -213,6 +223,9 @@ public class Lavel9 extends AppCompatActivity {
                 try {
                     Intent intent2 = new Intent(Lavel9.this, GameLevels.class);
                     startActivity(intent2); finish();
+
+                    cTimer.cancel();
+
                 }catch (Exception e){
 
                 }
