@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MotionEvent;
@@ -16,7 +17,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
+import android.media.MediaPlayer;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
@@ -36,10 +41,14 @@ public class Lavel8 extends AppCompatActivity {
     Array array = new Array();
     Random random = new Random(); //Переменная для генерации случайных чисел
     public int count = 0; //Счётчик правельных ответов
+    private final float maxVolume = 100.0f;
+    private float currentVolume = 5.0f;
 
+    MediaPlayer player;
     CountDownTimer cTimer = null;
     private TextView mTimer;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +60,11 @@ public class Lavel8 extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
         //Рекламный банер - конец
+
+        //Фоновая музыка - начало
+        player = MediaPlayer.create(this, R.raw.track1);
+        player.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+        //Фоновая музыка - конец
 
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
@@ -80,6 +94,8 @@ public class Lavel8 extends AppCompatActivity {
                     startActivity(intent); finish();
 
                     cTimer.cancel();
+
+                    player.stop();
 
                 }catch (Exception e){
 
@@ -129,6 +145,8 @@ public class Lavel8 extends AppCompatActivity {
 
                     cTimer.cancel();
 
+                    player.stop();
+
                 }catch (Exception e){
 
                 }
@@ -155,9 +173,12 @@ public class Lavel8 extends AppCompatActivity {
                         public void onFinish() {
                             Intent intent = new Intent(Lavel8.this, GameLevels.class);
                             startActivity(intent);finish();
+                            player.stop();
                         }
                     };
                     cTimer.start();
+
+                    player.start();
 
                 }catch (Exception e){
 
@@ -196,6 +217,8 @@ public class Lavel8 extends AppCompatActivity {
 
                     cTimer.cancel();
 
+                    player.stop();
+
                 }catch (Exception e){
 
                 }
@@ -216,6 +239,8 @@ public class Lavel8 extends AppCompatActivity {
                     startActivity(intent2); finish();
 
                     cTimer.cancel();
+
+                    player.stop();
 
                 }catch (Exception e){
 
@@ -265,8 +290,14 @@ public class Lavel8 extends AppCompatActivity {
                    img_right.setEnabled(false); //Блокируем правую картинку что бы не допустить нажатия на обе сразу
                    if (numLeft > numRight){
                        img_left.setImageResource(R.drawable.lvl1true);
+                       if (Build.VERSION.SDK_INT >= 26) {
+                           ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
+                       } else {
+                           ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(50);
+                       }
                    }else{
                        img_left.setImageResource(R.drawable.lvl1false);
+                       ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(250);
                    }
                    //Если коснулся картинки конец
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
@@ -356,8 +387,14 @@ public class Lavel8 extends AppCompatActivity {
                     img_left.setEnabled(false); //Блокируем лувую картинку что бы не допустить нажатия на обе сразу
                     if (numLeft < numRight){
                         img_right.setImageResource(R.drawable.lvl1true);
+                        if (Build.VERSION.SDK_INT >= 26) {
+                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
+                        } else {
+                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(50);
+                        }
                     }else{
                         img_right.setImageResource(R.drawable.lvl1false);
+                        ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(250);
                     }
                     //Если коснулся картинки конец
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){

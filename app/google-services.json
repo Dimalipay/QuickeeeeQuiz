@@ -33,6 +33,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062306984230:android:9151c64e07698cc3fa51e7",
+        "android_client_info": {
+          "package_name": "com.dima.viktorina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062306984230-551s9603l5m2fq3hai6ruvmpc0bqkddt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkRHmlGAAodp8u4ocsz0MT9B2L35O0mVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062306984230-551s9603l5m2fq3hai6ruvmpc0bqkddt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
