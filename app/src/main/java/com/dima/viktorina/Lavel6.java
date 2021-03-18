@@ -181,7 +181,7 @@ public class Lavel6 extends AppCompatActivity {
                     };
                     cTimer.start();
 
-                    player.stop();
+                    player.start();
 
                 }catch (Exception e){
 
