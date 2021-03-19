@@ -306,7 +306,11 @@ public class Lavel9 extends AppCompatActivity {
                        }
                    }else{
                        img_left.setImageResource(R.drawable.lvl1false);
-                       ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(250);
+                       if (Build.VERSION.SDK_INT >= 26) {
+                           ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
+                       } else {
+                           ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(250);
+                       }
                    }
                    //Если коснулся картинки конец
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
@@ -403,7 +407,11 @@ public class Lavel9 extends AppCompatActivity {
                         }
                     }else{
                         img_right.setImageResource(R.drawable.lvl1false);
-                        ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(250);
+                        if (Build.VERSION.SDK_INT >= 26) {
+                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
+                        } else {
+                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(250);
+                        }
                     }
                     //Если коснулся картинки конец
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){

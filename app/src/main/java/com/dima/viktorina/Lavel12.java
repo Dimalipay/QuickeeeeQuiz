@@ -46,6 +46,8 @@ public class Lavel12 extends AppCompatActivity {
 
 
     MediaPlayer player;
+    MediaPlayer player1;
+    MediaPlayer player2;
     CountDownTimer cTimer = null;
     private TextView mTimer;
 
@@ -397,6 +399,7 @@ public class Lavel12 extends AppCompatActivity {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
                         } else {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(50);
+
                         }
                     }else{
                         img_right.setImageResource(R.drawable.lvl1false);
