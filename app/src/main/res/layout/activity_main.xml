@@ -11,13 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
+        android:src="@drawable/main"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/main" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_marginBottom="240dp"
@@ -38,5 +39,7 @@
             android:shadowColor="#7B1FA2"
             android:text="@string/start"
             android:textColor="@color/white" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

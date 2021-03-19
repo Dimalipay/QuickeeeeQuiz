@@ -2,6 +2,9 @@
     <string name="app_name">Viktorina</string>
     <string name="start">Начать</string>
     <string name="back">Назад</string>
+    <string name="options">Настройки</string>
+    <string name="music_on_off">Отключить фоновую музыку</string>
+    <string name="exit">Выход</string>
     <string name="lavel">Уровень:</string>
     <string name="textcontinue">Продолжить</string>
     <string name="close">Закрыть</string>
@@ -17,4 +20,5 @@
     <string name="lavel9">Уровень 9</string>
     <string name="lavel10">Уровень 10</string>
     <string name="lavel11">Уровень 11</string>
+    <string name="lavel12">Уровень 12</string>
 </resources>

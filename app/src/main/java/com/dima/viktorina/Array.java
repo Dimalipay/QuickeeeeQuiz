@@ -332,4 +332,24 @@ public class Array {
             R.string.lvl11text21,
     };
     //массив для 11 уровня конец
+
+    //Массив для 12 уровня начало
+    final int[] images12 = {
+            R.drawable.lavel12_la,  R.drawable.lavel12_london,  R.drawable.lavel12_jakarta,  R.drawable.lavel12_cairo,
+            R.drawable.lavel12_delhi,  R.drawable.lavel12_seoul,  R.drawable.lavel12_new_york,  R.drawable.lavel12_chengdu,
+            R.drawable.lavel12_kinshasa,  R.drawable.lavel12_shenzhen,  R.drawable.lavel12_sao_paulo,  R.drawable.lavel12_moscov,
+            R.drawable.lavel12_tianjin,  R.drawable.lavel12_lagos,  R.drawable.lavel12_tokio,  R.drawable.lavel12_guangzhou,
+            R.drawable.lavel12_karachi,  R.drawable.lavel12_istanbul,  R.drawable.lavel12_mumbai,  R.drawable.lavel12_beijing,
+            R.drawable.lavel12_shanghai,
+    };
+
+    final int[] text12 = {
+            R.string.lvl12text1, R.string.lvl12text2, R.string.lvl12text3, R.string.lvl12text4,
+            R.string.lvl12text5, R.string.lvl12text6, R.string.lvl12text7, R.string.lvl12text8,
+            R.string.lvl12text9, R.string.lvl12text10, R.string.lvl12text11, R.string.lvl12text12,
+            R.string.lvl12text13, R.string.lvl12text14, R.string.lvl12text15, R.string.lvl12text16,
+            R.string.lvl12text17, R.string.lvl12text18, R.string.lvl12text19, R.string.lvl12text20,
+            R.string.lvl12text21,
+    };
+    //массив для 12 уровня конец
 }

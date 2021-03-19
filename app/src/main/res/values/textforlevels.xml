@@ -216,4 +216,26 @@
     <string name="lvl11text19">MrBeast</string>
     <string name="lvl11text20">Kids Diana Show</string>
     <string name="lvl11text21">PewDiePie</string>
+
+    <string name="lvl12text1">Лос-Анджелес</string>
+    <string name="lvl12text2">Лондон</string>
+    <string name="lvl12text3">Джакарта</string>
+    <string name="lvl12text4">Каир</string>
+    <string name="lvl12text5">Дели</string>
+    <string name="lvl12text6">Сеул</string>
+    <string name="lvl12text7">Нью-Йорк</string>
+    <string name="lvl12text8">Чэнду</string>
+    <string name="lvl12text9">Киншаса</string>
+    <string name="lvl12text10">Шэньчжэнь</string>
+    <string name="lvl12text11">Сан-Паулу</string>
+    <string name="lvl12text12">Москва</string>
+    <string name="lvl12text13">Тяньцзинь</string>
+    <string name="lvl12text14">Лагос</string>
+    <string name="lvl12text15">Токио</string>
+    <string name="lvl12text16">Гуанчжоу</string>
+    <string name="lvl12text17">Карачи</string>
+    <string name="lvl12text18">Стамбул</string>
+    <string name="lvl12text19">Мумбаи</string>
+    <string name="lvl12text20">Пекин</string>
+    <string name="lvl12text21">Шанхай</string>
 </resources>

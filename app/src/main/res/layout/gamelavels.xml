@@ -48,8 +48,8 @@
                             android:id="@+id/textView1"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
                             android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
                             android:background="@drawable/button_levels_style"
                             android:gravity="center"
                             android:text="1"
@@ -119,8 +119,8 @@
                             android:id="@+id/textView6"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
                             android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
                             android:background="@drawable/button_levels_style"
                             android:gravity="center"
                             android:text="6"
@@ -190,8 +190,8 @@
                             android:id="@+id/textView11"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
                             android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
                             android:background="@drawable/button_levels_style"
                             android:gravity="center"
                             android:text="11"
@@ -261,8 +261,8 @@
                             android:id="@+id/textView16"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
                             android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
                             android:background="@drawable/button_levels_style"
                             android:gravity="center"
                             android:text="16"
@@ -332,8 +332,8 @@
                             android:id="@+id/textView21"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
                             android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
                             android:background="@drawable/button_levels_style"
                             android:gravity="center"
                             android:text="21"
@@ -420,4 +420,5 @@
 
 
     </LinearLayout>
+
 </RelativeLayout>

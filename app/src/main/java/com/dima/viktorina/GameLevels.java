@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -41,9 +42,8 @@ public class GameLevels extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
-        TextView textView12 = (TextView) findViewById(R.id.textView12);
-        textView12.setOnClickListener(new View.OnClickListener() {
+        TextView textView13 = (TextView) findViewById(R.id.textView13);
+        textView13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -104,8 +104,8 @@ public class GameLevels extends AppCompatActivity {
             }
         });
 
-        TextView textView13 = (TextView) findViewById(R.id.textView13);
-        textView13.setOnClickListener(new View.OnClickListener() {
+        TextView textView14 = (TextView) findViewById(R.id.textView14);
+        textView14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -344,6 +344,21 @@ public class GameLevels extends AppCompatActivity {
             }
         });
         //Кнопка 11 уровня - конец
+
+        //Кнопка 12 уровня - начало
+        TextView textView12 = (TextView)findViewById(R.id.textView12);
+        textView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent12 = new Intent(GameLevels.this, Lavel12.class);
+                    startActivity(intent12); finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+        //Кнопка 12 уровня - конец
 
     }
     //Системная кнопка "Назад" - начало
