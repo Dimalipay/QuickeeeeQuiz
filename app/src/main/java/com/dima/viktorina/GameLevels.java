@@ -5,14 +5,18 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.view.Menu;
+import android.widget.Toast;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -41,6 +45,14 @@ public class GameLevels extends AppCompatActivity {
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        ImageButton imbtn = (ImageButton) findViewById(R.id.imageButton);
+        imbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPopupMenu(v);
+            }
+        });
 
         TextView textView13 = (TextView) findViewById(R.id.textView13);
         textView13.setOnClickListener(new View.OnClickListener() {
@@ -361,6 +373,30 @@ public class GameLevels extends AppCompatActivity {
         //Кнопка 12 уровня - конец
 
     }
+
+    private void showPopupMenu(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.inflate(R.menu.popup_menu);
+
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.item1:
+                        Toast.makeText(getApplicationContext(), "Item 1 clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.item2:
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                        System.exit(1);
+                        //Toast.makeText(getApplicationContext(), "Item 2 clicked", Toast.LENGTH_SHORT).show();
+                    default:
+                        return false;
+                }
+            }
+        });
+        popup.show();
+    }
+
     //Системная кнопка "Назад" - начало
     @Override
     public void onBackPressed(){

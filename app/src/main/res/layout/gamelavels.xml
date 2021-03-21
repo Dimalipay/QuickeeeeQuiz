@@ -12,6 +12,15 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/level" />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/menu" />
+
     <LinearLayout
         android:id="@+id/container1"
         android:layout_width="match_parent"
