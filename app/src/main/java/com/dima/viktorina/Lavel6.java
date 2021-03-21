@@ -45,6 +45,8 @@ public class Lavel6 extends AppCompatActivity {
     private float currentVolume = 5.0f;
 
     MediaPlayer player;
+    MediaPlayer player1;
+    MediaPlayer player2;
     CountDownTimer cTimer = null;
     private TextView mTimer;
 
@@ -268,6 +270,16 @@ public class Lavel6 extends AppCompatActivity {
         final Animation a = AnimationUtils.loadAnimation(Lavel6.this, R.anim.alpha);
         //Подключаем анимацию - конец
 
+        //Звук ответа true - начало
+        player1 = MediaPlayer.create(this, R.raw.true1);
+        player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+        //Звук ответа true - конец
+
+        //Звук ответа false - начало
+        player2 = MediaPlayer.create(this, R.raw.false1);
+        player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+        //Звук ответа false - конец
+
         //Для левой части
         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
         img_left.setImageResource(array.images6[numLeft]); //Берём картинку из массива
@@ -293,6 +305,7 @@ public class Lavel6 extends AppCompatActivity {
                    img_right.setEnabled(false); //Блокируем правую картинку что бы не допустить нажатия на обе сразу
                    if (numLeft > numRight){
                        img_left.setImageResource(R.drawable.lvl1true);
+                       player1.start();
                        if (Build.VERSION.SDK_INT >= 26) {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
                        } else {
@@ -300,6 +313,7 @@ public class Lavel6 extends AppCompatActivity {
                        }
                    }else{
                        img_left.setImageResource(R.drawable.lvl1false);
+                       player2.start();
                        if (Build.VERSION.SDK_INT >= 26) {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
                        } else {
@@ -394,6 +408,7 @@ public class Lavel6 extends AppCompatActivity {
                     img_left.setEnabled(false); //Блокируем лувую картинку что бы не допустить нажатия на обе сразу
                     if (numLeft < numRight){
                         img_right.setImageResource(R.drawable.lvl1true);
+                        player1.start();
                         if (Build.VERSION.SDK_INT >= 26) {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
                         } else {
@@ -401,6 +416,7 @@ public class Lavel6 extends AppCompatActivity {
                         }
                     }else{
                         img_right.setImageResource(R.drawable.lvl1false);
+                        player2.start();
                         if (Build.VERSION.SDK_INT >= 26) {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
                         } else {
