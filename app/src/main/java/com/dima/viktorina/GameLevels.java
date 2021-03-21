@@ -388,7 +388,6 @@ public class GameLevels extends AppCompatActivity {
                     case R.id.item2:
                         android.os.Process.killProcess(android.os.Process.myPid());
                         System.exit(1);
-                        //Toast.makeText(getApplicationContext(), "Item 2 clicked", Toast.LENGTH_SHORT).show();
                     default:
                         return false;
                 }
