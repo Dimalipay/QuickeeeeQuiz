@@ -4,9 +4,10 @@
     <string name="back">Назад</string>
     <string name="options">Настройки</string>
     <string name="music_on_off">Отключить фоновую музыку</string>
+    <string name="vibra_on_off">Отключить вибрацию</string>
     <string name="music_on">Музыка включена</string>
     <string name="music_off">Музыка выключена</string>
-    <string name="policy">Политика конфиденциальности </string>
+    <string name="policy"><a href = "https://www.google.com/">Политика конфиденциальности</a></string>
     <string name="exit">Выход</string>
     <string name="lavel">Уровень:</string>
     <string name="textcontinue">Продолжить</string>

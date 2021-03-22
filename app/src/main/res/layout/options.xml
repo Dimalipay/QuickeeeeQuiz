@@ -43,41 +43,60 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button3"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="200dp"
-                        android:text="Button" />
-
                     <CheckBox
                         android:id="@+id/checkBox2"
-                        android:layout_width="200dp"
-                        android:layout_height="40dp"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:layout_gravity="center"
+                        android:layout_marginTop="200dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="@string/music_on_off" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="20dp"
-                        android:text="CheckBox" />
+                        android:gravity="center"
+                        android:text="@string/vibra_on_off"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
                     <Switch
                         android:id="@+id/switch1"
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:layout_marginTop="20dp"
-                        android:text="Switch" />
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="@string/music_on_off" />
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="@string/vibra_on_off"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/policy"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_marginTop="390dp"
+                        android:textColorLink="@color/white"
+                        android:layout_marginTop="310dp"
                         android:text="@string/policy"
-                        android:textColor="@color/white"
+                        android:alpha="0.7"
                         android:textSize="18sp" />
                 </LinearLayout>
 

@@ -495,7 +495,29 @@ public class Lavel7 extends AppCompatActivity {
             }
         });
         //Обрабатываем нажатие не правую картинку - конец
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (player != null) player.release();
+        if (player1 != null) player1.release();
+        if (player2 != null) player2.release();
+    }
 
+    @Override
+    protected void onPause(){
+        super.onPause();
+        player.pause();
+        player1.pause();
+        player2.pause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        player.start();
+        player1.start();
+        player2.start();
     }
 }

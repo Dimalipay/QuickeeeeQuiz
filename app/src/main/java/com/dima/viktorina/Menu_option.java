@@ -3,10 +3,12 @@ package com.dima.viktorina;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,17 +22,7 @@ public class Menu_option extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        Button button3 = (Button)findViewById(R.id.button3);
-
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-
-                }catch (Exception e){
-
-                }
-            }
-        });
+        TextView policy = (TextView)findViewById(R.id.policy);
+        policy.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
