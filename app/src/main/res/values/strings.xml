@@ -6,6 +6,7 @@
     <string name="music_on_off">Отключить фоновую музыку</string>
     <string name="music_on">Музыка включена</string>
     <string name="music_off">Музыка выключена</string>
+    <string name="policy">Политика конфиденциальности </string>
     <string name="exit">Выход</string>
     <string name="lavel">Уровень:</string>
     <string name="textcontinue">Продолжить</string>

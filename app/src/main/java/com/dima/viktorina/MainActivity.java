@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-    //Системная кнопка "Назад" - начало
 
+    //Системная кнопка "Назад" - начало
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -55,6 +55,5 @@ public class MainActivity extends AppCompatActivity {
 
         backPressedTime = System.currentTimeMillis();
     }
-
     //Системная кнопка "Назад" - конец
 }

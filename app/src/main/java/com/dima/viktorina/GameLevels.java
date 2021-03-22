@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.MenuItem;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -383,11 +384,14 @@ public class GameLevels extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.item1:
-                        Toast.makeText(getApplicationContext(), "Item 1 clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent_opt = new Intent(GameLevels.this, Menu_option.class);
+                        startActivity(intent_opt);
+                        //Toast.makeText(getApplicationContext(), "Item 1 clicked", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.item2:
                         android.os.Process.killProcess(android.os.Process.myPid());
                         System.exit(1);
+                        return true;
                     default:
                         return false;
                 }
