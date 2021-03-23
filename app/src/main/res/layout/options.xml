@@ -23,6 +23,7 @@
         android:layout_marginBottom="4dp"
         android:orientation="horizontal"
         android:padding="10dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -31,57 +32,52 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="visible">
 
-                    <CheckBox
-                        android:id="@+id/checkBox2"
+                    <TextView
+                        android:id="@+id/btncloce"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity=""
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/style_btn_main"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:text="X"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/switch_music"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_gravity="center"
-                        android:layout_marginTop="200dp"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:text="@string/music_on_off" />
+                        android:layout_marginTop="150dp"
+                        android:gravity="center"
 
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:gravity="center"
-                        android:text="@string/vibra_on_off"
+                        android:text="@string/music_on_off"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
                     <Switch
-                        android:id="@+id/switch1"
+                        android:id="@+id/switch_vibro"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:text="@string/music_on_off" />
-
-                    <Switch
-                        android:id="@+id/switch2"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="30dp"
                         android:gravity="center"
                         android:text="@string/vibra_on_off"
                         android:textColor="@color/white"
@@ -92,12 +88,13 @@
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColorLink="@color/white"
-                        android:layout_marginTop="310dp"
-                        android:text="@string/policy"
+                        android:layout_marginTop="440dp"
                         android:alpha="0.7"
+                        android:gravity="center"
+                        android:text="@string/policy"
+                        android:textColorLink="@color/white"
                         android:textSize="18sp" />
+
                 </LinearLayout>
 
             </LinearLayout>
