@@ -50,6 +50,7 @@ public class Lavel4 extends AppCompatActivity {
 
         //Фоновая музыка - начало
         player = MediaPlayer.create(this, R.raw.track1);
+        player.setLooping(true);
         player.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
         //Фоновая музыка - конец
 

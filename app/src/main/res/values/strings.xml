@@ -5,8 +5,10 @@
     <string name="options">Настройки</string>
     <string name="music_on_off">Отключить фоновую музыку</string>
     <string name="vibra_on_off">Отключить вибрацию</string>
+    <string name="music_otv_on_off">Отключить звуки ответов</string>
     <string name="music_on">Музыка включена</string>
     <string name="music_off">Музыка выключена</string>
+    <string name="ar">AR режим</string>
     <string name="policy"><a href = "https://www.google.com/">Политика конфиденциальности</a></string>
     <string name="exit">Выход</string>
     <string name="lavel">Уровень:</string>

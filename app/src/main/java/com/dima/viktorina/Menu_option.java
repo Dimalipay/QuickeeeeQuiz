@@ -56,5 +56,33 @@ public class Menu_option extends AppCompatActivity {
                 }
             }
         });
+
+        Switch Switch_vibro = (Switch)findViewById(R.id.switch_vibro);
+        Switch_vibro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Switch_music.isChecked()) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Включено", Toast.LENGTH_SHORT);
+                    toast.show();
+                }else {
+                    Toast toast1 = Toast.makeText(getApplicationContext(), "Выключено", Toast.LENGTH_SHORT);
+                    toast1.show();
+                }
+            }
+        });
+
+        Switch Switch_music_otv = (Switch)findViewById(R.id.switch_music_otv);
+        Switch_music_otv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Switch_music.isChecked()) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Включено", Toast.LENGTH_SHORT);
+                    toast.show();
+                }else {
+                    Toast toast1 = Toast.makeText(getApplicationContext(), "Выключено", Toast.LENGTH_SHORT);
+                    toast1.show();
+                }
+            }
+        });
     }
 }

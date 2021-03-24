@@ -83,12 +83,23 @@
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
+                    <Switch
+                        android:id="@+id/switch_music_otv"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:text="@string/music_otv_on_off"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
                     <TextView
                         android:id="@+id/policy"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="440dp"
+                        android:layout_marginTop="360dp"
                         android:alpha="0.7"
                         android:gravity="center"
                         android:text="@string/policy"
