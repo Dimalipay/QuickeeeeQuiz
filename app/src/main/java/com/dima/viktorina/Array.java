@@ -352,4 +352,57 @@ public class Array {
             R.string.lvl12text21,
     };
     //массив для 12 уровня конец
+
+    //Массив для 13 уровня начало
+    final int[] images13 = {
+            R.drawable.lavel13_drill,
+            R.drawable.lavel13_ball,
+            R.drawable.lavel13_electric_saw,
+            R.drawable.lavel13_crane,
+            R.drawable.lavel13_hammer,
+            R.drawable.lavel13_dji,
+            R.drawable.lavel13_layer,
+            R.drawable.lavel13_dog,
+            R.drawable.lavel13_plane,
+            R.drawable.lavel13_gold,
+            R.drawable.lavel13_pliers,
+            R.drawable.lavel13_headphones,
+            R.drawable.lavel13_putty_knife,
+            R.drawable.lavel13_house,
+            R.drawable.lavel13_saw,
+            R.drawable.lavel13_motorcycle,
+            R.drawable.lavel13_screwdriver,
+            R.drawable.lavel13_ship,
+            R.drawable.lavel13_wrench,
+            R.drawable.lavel13_tree,
+    };
+
+    final int[] text13 = {
+            R.string.lvl13text1,
+            R.string.lvl13text2,
+            R.string.lvl13text3,
+            R.string.lvl13text4,
+            R.string.lvl13text5,
+            R.string.lvl13text6,
+            R.string.lvl13text7,
+            R.string.lvl13text8,
+            R.string.lvl13text9,
+            R.string.lvl13text10,
+            R.string.lvl13text11,
+            R.string.lvl13text12,
+            R.string.lvl13text13,
+            R.string.lvl13text14,
+            R.string.lvl13text15,
+            R.string.lvl13text16,
+            R.string.lvl13text17,
+            R.string.lvl13text18,
+            R.string.lvl13text19,
+            R.string.lvl13text20,
+
+    };
+
+    final int[] strotg13 = {
+            1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+    };
+    //массив для 13 уровня конец
 }

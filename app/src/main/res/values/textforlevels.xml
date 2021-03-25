@@ -238,4 +238,26 @@
     <string name="lvl12text19">Мумбаи</string>
     <string name="lvl12text20">Пекин</string>
     <string name="lvl12text21">Шанхай</string>
+
+    <string name="lvl13text1">Дрель</string>
+    <string name="lvl13text2">Мяч</string>
+    <string name="lvl13text3">Электрическая пила</string>
+    <string name="lvl13text4">Кран</string>
+    <string name="lvl13text5">Молоток</string>
+    <string name="lvl13text6">Дрон</string>
+    <string name="lvl13text7">Уровень</string>
+    <string name="lvl13text8">Собака</string>
+    <string name="lvl13text9">Рубанок</string>
+    <string name="lvl13text10">Золото</string>
+    <string name="lvl13text11">Плоскогубцы</string>
+    <string name="lvl13text12">Наушники</string>
+    <string name="lvl13text13">Шпатель</string>
+    <string name="lvl13text14">Дом</string>
+    <string name="lvl13text15">Пила</string>
+    <string name="lvl13text16">Мотоцикл</string>
+    <string name="lvl13text17">Отвёртка</string>
+    <string name="lvl13text18">Корабль</string>
+    <string name="lvl13text19">Гаечный ключ</string>
+    <string name="lvl13text20">Дерево</string>
+
 </resources>
