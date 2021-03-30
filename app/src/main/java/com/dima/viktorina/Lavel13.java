@@ -271,13 +271,11 @@ public class Lavel13 extends AppCompatActivity {
 
         //Звук ответа true - начало
         player1 = MediaPlayer.create(this, R.raw.true1);
-        player1.setLooping(true);
         player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
         //Звук ответа true - конец
 
         //Звук ответа false - начало
         player2 = MediaPlayer.create(this, R.raw.false1);
-        player2.setLooping(true);
         player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
         //Звук ответа false - конец
 
