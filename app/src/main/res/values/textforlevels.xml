@@ -260,4 +260,24 @@
     <string name="lvl13text19">Гаечный ключ</string>
     <string name="lvl13text20">Дерево</string>
 
+    <string name="lvl14text1">Сом</string>
+    <string name="lvl14text2">Скат</string>
+    <string name="lvl14text3">Белуга</string>
+    <string name="lvl14text4">Белая акула</string>
+    <string name="lvl14text5">Карп</string>
+    <string name="lvl14text6">Морская черепаха</string>
+    <string name="lvl14text7">Окунь</string>
+    <string name="lvl14text8">Рыба клоун</string>
+    <string name="lvl14text9">Лещ</string>
+    <string name="lvl14text10">Фугу</string>
+    <string name="lvl14text11">Осётр</string>
+    <string name="lvl14text12">Краб</string>
+    <string name="lvl14text13">Плотва</string>
+    <string name="lvl14text14">Медуза</string>
+    <string name="lvl14text15">Ёрш</string>
+    <string name="lvl14text16">Камбала</string>
+    <string name="lvl14text17">Щука</string>
+    <string name="lvl14text18">Осьминог</string>
+    <string name="lvl14text19">Вобла</string>
+    <string name="lvl14text20">Морская звезда</string>
 </resources>

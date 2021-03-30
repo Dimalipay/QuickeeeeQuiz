@@ -405,4 +405,56 @@ public class Array {
             1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
     };
     //массив для 13 уровня конец
+
+    //Массив для 14 уровня начало
+    final int[] images14 = {
+            R.drawable.lavel14_catfish,
+            R.drawable.lavel14_slope,
+            R.drawable.lavel14_beluga,
+            R.drawable.lavel14_white_shark,
+            R.drawable.lavel14_carp,
+            R.drawable.lavel14_turtle,
+            R.drawable.lavel14_perch,
+            R.drawable.lavel14_clown,
+            R.drawable.lavel14_bream,
+            R.drawable.lavel14_fugue,
+            R.drawable.lavel14_sturgeon,
+            R.drawable.lavel14_crab,
+            R.drawable.lavel14_roach,
+            R.drawable.lavel14_jellyfish,
+            R.drawable.lavel14_rsh,
+            R.drawable.lavel14_flounder,
+            R.drawable.lavel14_pike,
+            R.drawable.lavel14_octopus,
+            R.drawable.lavel14_vobla,
+            R.drawable.lavel14_starfish,
+    };
+
+    final int[] text14 = {
+            R.string.lvl14text1,
+            R.string.lvl14text2,
+            R.string.lvl14text3,
+            R.string.lvl14text4,
+            R.string.lvl14text5,
+            R.string.lvl14text6,
+            R.string.lvl14text7,
+            R.string.lvl14text8,
+            R.string.lvl14text9,
+            R.string.lvl14text10,
+            R.string.lvl14text11,
+            R.string.lvl14text12,
+            R.string.lvl14text13,
+            R.string.lvl14text14,
+            R.string.lvl14text15,
+            R.string.lvl14text16,
+            R.string.lvl14text17,
+            R.string.lvl14text18,
+            R.string.lvl14text19,
+            R.string.lvl14text20,
+    };
+
+    final int[] strotg14 = {
+            1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+    };
+    //массив для 14 уровня конец
 }

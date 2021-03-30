@@ -19,6 +19,7 @@ import android.widget.Toast;
 import android.view.MenuItem;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
@@ -26,6 +27,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.InterstitialAd;
+import com.ramotion.circlemenu.CircleMenuView;
 
 public class GameLevels extends AppCompatActivity {
 
@@ -36,6 +38,8 @@ public class GameLevels extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gamelavels);
+
+        //final CircleMenuView circleMenu = findViewById(R.id.circleMenu);
 
         //Рекламный банер - начало
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-6157182552660079~8128665018");
@@ -55,8 +59,33 @@ public class GameLevels extends AppCompatActivity {
             }
         });
 
-        TextView textView13 = (TextView) findViewById(R.id.textView13);
-        textView13.setOnClickListener(new View.OnClickListener() {
+        /*circleMenu.setEventListener(new CircleMenuView.EventListener(){
+            @Override
+            public void onMenuOpenAnimationStart(@NonNull CircleMenuView view) {
+                //
+            }
+
+            @Override
+            public void onButtonClickAnimationStart(@NonNull CircleMenuView view, int buttonIndex) {
+                super.onButtonClickAnimationStart(view, buttonIndex);
+                switch (buttonIndex){
+                    case 0:
+                        Toast.makeText(GameLevels.this, "Hello world", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 1:
+                        Toast.makeText(GameLevels.this, "Hello world1", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 2:
+                        Toast.makeText(GameLevels.this, "Hello world2", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        });*/
+
+        TextView textView15 = (TextView) findViewById(R.id.textView15);
+        textView15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -117,8 +146,8 @@ public class GameLevels extends AppCompatActivity {
             }
         });
 
-        TextView textView14 = (TextView) findViewById(R.id.textView14);
-        textView14.setOnClickListener(new View.OnClickListener() {
+        TextView textView16 = (TextView) findViewById(R.id.textView16);
+        textView16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -372,6 +401,36 @@ public class GameLevels extends AppCompatActivity {
             }
         });
         //Кнопка 12 уровня - конец
+
+        //Кнопка 13 уровня - начало
+        TextView textView13 = (TextView)findViewById(R.id.textView13);
+        textView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent13 = new Intent(GameLevels.this, Lavel13.class);
+                    startActivity(intent13); finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+        //Кнопка 13 уровня - конец
+
+        //Кнопка 14 уровня - начало
+        TextView textView14 = (TextView)findViewById(R.id.textView14);
+        textView14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent14 = new Intent(GameLevels.this, Lavel14.class);
+                    startActivity(intent14); finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+        //Кнопка 14 уровня - конец
 
     }
 
