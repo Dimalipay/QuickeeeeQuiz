@@ -30,6 +30,10 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.Random;
 
+import nl.dionsegijn.konfetti.KonfettiView;
+import nl.dionsegijn.konfetti.models.Shape;
+import nl.dionsegijn.konfetti.models.Size;
+
 public class Lavel14 extends AppCompatActivity {
 
     Dialog dialog;
@@ -202,13 +206,14 @@ public class Lavel14 extends AppCompatActivity {
         dialogExit.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         dialogExit.setCancelable(false); //Окно нельзя закрыть системными кнопками
 
+
         LinearLayout dialogfonExit = (LinearLayout)dialogExit.findViewById(R.id.dialogfon_exit);
         dialogfonExit.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
 
         TextView textExit = (TextView)dialogExit.findViewById(R.id.dialogtextexit);
         textExit.setText(R.string.dialogtextexit14);
-
         //Кнопка закрытия диалогового окна - начало
+
 
         TextView btncloce2 = (TextView)dialogExit.findViewById(R.id.btncloce);
         btncloce2.setOnClickListener(new View.OnClickListener() {
@@ -312,7 +317,6 @@ public class Lavel14 extends AppCompatActivity {
                        }
                    }else{
                        img_left.setImageResource(R.drawable.lvl1false);
-                       player2.start();
                        if (Build.VERSION.SDK_INT >= 26) {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
                        } else {
@@ -369,6 +373,18 @@ public class Lavel14 extends AppCompatActivity {
                     if (count == 20){
                         //Выход из уровня
                         dialogExit.show();
+                        final KonfettiView konfettiView = findViewById(R.id.konfetti);
+                        konfettiView.build()
+                                .addColors(Color.YELLOW, Color.GREEN, Color.RED)
+                                .setDirection(0.0, 359.0)
+                                .setSpeed(1f, 5f)
+                                .setFadeOutEnabled(true)
+                                .setTimeToLive(2000L)
+                                .addShapes(Shape.Square.INSTANCE, Shape.Circle.INSTANCE)
+                                .addSizes(new Size(12, 5f))
+                                .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
+                                .streamFor(300, 5000L);
+
                     }else {
                         numLeft = random.nextInt(20); //Генерация случайных чисел от 1 до 20
                         img_left.setImageResource(array.images14[numLeft]); //Берём картинку из массива
@@ -470,6 +486,17 @@ public class Lavel14 extends AppCompatActivity {
                     if (count == 20){
                         //Выход из уровня
                         dialogExit.show();
+                        final KonfettiView konfettiView = findViewById(R.id.konfetti);
+                        konfettiView.build()
+                                .addColors(Color.YELLOW, Color.GREEN, Color.RED)
+                                .setDirection(0.0, 359.0)
+                                .setSpeed(1f, 5f)
+                                .setFadeOutEnabled(true)
+                                .setTimeToLive(2000L)
+                                .addShapes(Shape.Square.INSTANCE, Shape.Circle.INSTANCE)
+                                .addSizes(new Size(12, 5f))
+                                .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
+                                .streamFor(300, 5000L);
                     }else {
                         numLeft = random.nextInt(20); //Генерация случайных чисел от 1 до 20
                         img_left.setImageResource(array.images14[numLeft]); //Берём картинку из массива

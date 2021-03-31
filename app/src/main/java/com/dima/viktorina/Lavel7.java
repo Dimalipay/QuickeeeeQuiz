@@ -30,6 +30,10 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.Random;
 
+import nl.dionsegijn.konfetti.KonfettiView;
+import nl.dionsegijn.konfetti.models.Shape;
+import nl.dionsegijn.konfetti.models.Size;
+
 public class Lavel7 extends AppCompatActivity {
 
     Dialog dialog;
@@ -369,6 +373,18 @@ public class Lavel7 extends AppCompatActivity {
                     if (count == 20){
                         //Выход из уровня
                         dialogExit.show();
+                        final KonfettiView konfettiView = findViewById(R.id.konfetti);
+                        konfettiView.build()
+                                .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                                .setDirection(0.0, 359.0)
+                                .setSpeed(1f, 5f)
+                                .setFadeOutEnabled(true)
+                                .setTimeToLive(2000L)
+                                .addShapes(Shape.Square.INSTANCE, Shape.Circle.INSTANCE)
+                                .addSizes(new Size(12, 5f))
+                                .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
+                                .streamFor(300, 5000L);
+
                     }else {
                         numLeft = random.nextInt(20); //Генерация случайных чисел от 1 до 20
                         img_left.setImageResource(array.images7[numLeft]); //Берём картинку из массива
@@ -470,6 +486,18 @@ public class Lavel7 extends AppCompatActivity {
                     if (count == 20){
                         //Выход из уровня
                         dialogExit.show();
+                        final KonfettiView konfettiView = findViewById(R.id.konfetti);
+                        konfettiView.build()
+                                .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                                .setDirection(0.0, 359.0)
+                                .setSpeed(1f, 5f)
+                                .setFadeOutEnabled(true)
+                                .setTimeToLive(2000L)
+                                .addShapes(Shape.Square.INSTANCE, Shape.Circle.INSTANCE)
+                                .addSizes(new Size(12, 5f))
+                                .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
+                                .streamFor(300, 5000L);
+
                     }else {
                         numLeft = random.nextInt(20); //Генерация случайных чисел от 1 до 20
                         img_left.setImageResource(array.images7[numLeft]); //Берём картинку из массива
