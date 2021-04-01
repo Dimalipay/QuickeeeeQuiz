@@ -23,6 +23,8 @@
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
         app:fab_expandDirection="right"
         app:fab_addButtonSize="normal"
