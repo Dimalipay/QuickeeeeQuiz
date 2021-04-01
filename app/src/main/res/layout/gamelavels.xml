@@ -12,14 +12,43 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/level" />
 
-    <ImageButton
+    <!--<ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/menu" />
+        app:srcCompat="@drawable/menu" />-->
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_expandDirection="right"
+        app:fab_addButtonSize="normal"
+        app:fab_addButtonColorNormal="@color/Purpl"
+        android:layout_alignParentTop="true">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/floatingactionbutton0"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/Purpl"
+            app:fab_colorPressed="@color/purple_200"
+            app:fab_icon="@drawable/ic_baseline_close_24" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/floatingactionbutton1"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/Purpl"
+            app:fab_colorPressed="@color/purple_200"
+            app:fab_icon="@drawable/ic_baseline_menu_24" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
 
     <LinearLayout
         android:id="@+id/container1"

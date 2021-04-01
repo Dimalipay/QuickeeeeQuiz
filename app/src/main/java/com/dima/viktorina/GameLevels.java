@@ -23,6 +23,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -34,6 +35,7 @@ public class GameLevels extends AppCompatActivity {
 
     Dialog dialog;
     private AdView adView;
+    private FloatingActionButton floatingactionbutton0, floatingactionbutton1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +55,31 @@ public class GameLevels extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        ImageButton imbtn = (ImageButton) findViewById(R.id.imageButton);
+       /* ImageButton imbtn = (ImageButton) findViewById(R.id.imageButton);
         imbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showPopupMenu(v);
             }
+        });*/
+
+        floatingactionbutton0 = findViewById(R.id.floatingactionbutton0);
+        floatingactionbutton0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
+            }
         });
 
+        floatingactionbutton1 = findViewById(R.id.floatingactionbutton1);
+        floatingactionbutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_opt = new Intent(GameLevels.this, Menu_option.class);
+                startActivity(intent_opt);finish();
+            }
+        });
 
         TextView textView15 = (TextView) findViewById(R.id.textView15);
         textView15.setOnClickListener(new View.OnClickListener() {
