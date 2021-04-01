@@ -2,6 +2,7 @@ package com.dima.viktorina;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -39,7 +40,8 @@ public class GameLevels extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gamelavels);
 
-        //final CircleMenuView circleMenu = findViewById(R.id.circleMenu);
+        //SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        //final int lavel = save.getInt("Lavel", 1);
 
         //Рекламный банер - начало
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-6157182552660079~8128665018");
@@ -59,30 +61,6 @@ public class GameLevels extends AppCompatActivity {
             }
         });
 
-        /*circleMenu.setEventListener(new CircleMenuView.EventListener(){
-            @Override
-            public void onMenuOpenAnimationStart(@NonNull CircleMenuView view) {
-                //
-            }
-
-            @Override
-            public void onButtonClickAnimationStart(@NonNull CircleMenuView view, int buttonIndex) {
-                super.onButtonClickAnimationStart(view, buttonIndex);
-                switch (buttonIndex){
-                    case 0:
-                        Toast.makeText(GameLevels.this, "Hello world", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case 1:
-                        Toast.makeText(GameLevels.this, "Hello world1", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case 2:
-                        Toast.makeText(GameLevels.this, "Hello world2", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-            }
-        });*/
 
         TextView textView15 = (TextView) findViewById(R.id.textView15);
         textView15.setOnClickListener(new View.OnClickListener() {
@@ -227,8 +205,12 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                try {
-                   Intent intent = new Intent(GameLevels.this, Lavel1.class);
-                   startActivity(intent); finish();
+                   //if (lavel >=1){
+                       Intent intent = new Intent(GameLevels.this, Lavel1.class);
+                       startActivity(intent); finish();
+                   //}else{
+
+                   //}
                }catch (Exception e){
 
                }
@@ -243,8 +225,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent2 = new Intent(GameLevels.this, Lavel2.class);
-                    startActivity(intent2); finish();
+                    //if (lavel>=2) {
+                        Intent intent2 = new Intent(GameLevels.this, Lavel2.class);
+                        startActivity(intent2);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -258,8 +245,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent3 = new Intent(GameLevels.this, Lavel3.class);
-                    startActivity(intent3); finish();
+                    //if (lavel>=3) {
+                        Intent intent3 = new Intent(GameLevels.this, Lavel3.class);
+                        startActivity(intent3);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -273,8 +265,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent4 = new Intent(GameLevels.this, Lavel4.class);
-                    startActivity(intent4); finish();
+                    //if (lavel>=4) {
+                        Intent intent4 = new Intent(GameLevels.this, Lavel4.class);
+                        startActivity(intent4);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -288,8 +285,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent5 = new Intent(GameLevels.this, Lavel5.class);
-                    startActivity(intent5); finish();
+                    //if (lavel>=5) {
+                        Intent intent5 = new Intent(GameLevels.this, Lavel5.class);
+                        startActivity(intent5);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -303,8 +305,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent6 = new Intent(GameLevels.this, Lavel6.class);
-                    startActivity(intent6); finish();
+                    //if (lavel>=6) {
+                        Intent intent6 = new Intent(GameLevels.this, Lavel6.class);
+                        startActivity(intent6);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -318,8 +325,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent7 = new Intent(GameLevels.this, Lavel7.class);
-                    startActivity(intent7); finish();
+                    //if (lavel>=7) {
+                        Intent intent7 = new Intent(GameLevels.this, Lavel7.class);
+                        startActivity(intent7);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -333,8 +345,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent8 = new Intent(GameLevels.this, Lavel8.class);
-                    startActivity(intent8); finish();
+                    //if (lavel>=8) {
+                        Intent intent8 = new Intent(GameLevels.this, Lavel8.class);
+                        startActivity(intent8);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -348,8 +365,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent9 = new Intent(GameLevels.this, Lavel9.class);
-                    startActivity(intent9); finish();
+                    //if (lavel>=9) {
+                        Intent intent9 = new Intent(GameLevels.this, Lavel9.class);
+                        startActivity(intent9);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -363,8 +385,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent10 = new Intent(GameLevels.this, Lavel10.class);
-                    startActivity(intent10); finish();
+                    //if (lavel>=10) {
+                        Intent intent10 = new Intent(GameLevels.this, Lavel10.class);
+                        startActivity(intent10);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -378,8 +405,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent11 = new Intent(GameLevels.this, Lavel11.class);
-                    startActivity(intent11); finish();
+                    //if (lavel>=11) {
+                        Intent intent11 = new Intent(GameLevels.this, Lavel11.class);
+                        startActivity(intent11);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -393,8 +425,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent12 = new Intent(GameLevels.this, Lavel12.class);
-                    startActivity(intent12); finish();
+                    //if (lavel>=12) {
+                        Intent intent12 = new Intent(GameLevels.this, Lavel12.class);
+                        startActivity(intent12);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -408,8 +445,13 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent13 = new Intent(GameLevels.this, Lavel13.class);
-                    startActivity(intent13); finish();
+                    //if (lavel>=13) {
+                        Intent intent13 = new Intent(GameLevels.this, Lavel13.class);
+                        startActivity(intent13);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
@@ -458,6 +500,27 @@ public class GameLevels extends AppCompatActivity {
         });
         popup.show();
     }
+
+    /*final int[] x = {
+            R.id.textView1,
+            R.id.textView2,
+            R.id.textView3,
+            R.id.textView4,
+            R.id.textView5,
+            R.id.textView6,
+            R.id.textView7,
+            R.id.textView8,
+            R.id.textView9,
+            R.id.textView10,
+            R.id.textView11,
+            R.id.textView12,
+            R.id.textView13,
+    };
+
+    for(int i=1; i < lavel; i++){
+        TextView tv = findViewById(x[i]);
+        tv.setText("" + (i + 1));
+    }*/
 
     //Системная кнопка "Назад" - начало
     @Override

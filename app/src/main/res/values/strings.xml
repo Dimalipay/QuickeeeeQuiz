@@ -9,7 +9,7 @@
     <string name="music_on">Музыка включена</string>
     <string name="music_off">Музыка выключена</string>
     <string name="ar">AR режим</string>
-    <string name="policy"><a href = "https://www.google.com/">Политика конфиденциальности</a></string>
+    <string name="policy"><a href="http://project3908066.tilda.ws/">Политика конфиденциальности</a></string>
     <string name="exit">Выход</string>
     <string name="lavel">Уровень:</string>
     <string name="textcontinue">Продолжить</string>

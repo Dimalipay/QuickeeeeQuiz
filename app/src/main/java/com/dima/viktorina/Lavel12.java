@@ -2,6 +2,7 @@ package com.dima.viktorina;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -371,6 +372,16 @@ public class Lavel12 extends AppCompatActivity {
                     //Если отпустил палец - конец
 
                     if (count == 20){
+                        //Сохранение прогресса в игре
+                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                        final int lavel = save.getInt("Lavel", 1);
+                        if (lavel > 12){
+
+                        }else{
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Lavel", 13);
+                        }
+
                         //Выход из уровня
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);
@@ -486,6 +497,16 @@ public class Lavel12 extends AppCompatActivity {
                     //Если отпустил палец - конец
 
                     if (count == 20){
+                        //Сохранение прогресса в игре
+                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                        final int lavel = save.getInt("Lavel", 1);
+                        if (lavel > 12){
+
+                        }else{
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Lavel", 13);
+                        }
+
                         //Выход из уровня
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);

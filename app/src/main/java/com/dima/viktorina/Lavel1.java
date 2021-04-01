@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -325,6 +326,16 @@ public class Lavel1 extends AppCompatActivity {
                     //Если отпустил палец - конец
 
                     if (count == 20){
+                        //Сохранение прогресса в игре
+                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                        final int lavel = save.getInt("Lavel", 1);
+                        if (lavel > 1){
+
+                        }else{
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Lavel", 2);
+                        }
+
                         //Выход из уровня
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);
@@ -440,6 +451,16 @@ public class Lavel1 extends AppCompatActivity {
                     //Если отпустил палец - конец
 
                     if (count == 20){
+                        //Сохранение прогресса в игре
+                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                        final int lavel = save.getInt("Lavel", 1);
+                        if (lavel > 1){
+
+                        }else{
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Lavel", 2);
+                        }
+
                         //Выход из уровня
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);
