@@ -120,7 +120,7 @@ public class Lavel3 extends AppCompatActivity {
 
         //Текст для диалогового окна - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-        textdescription.setText(R.string.levelthree);
+        textdescription.setText(R.string.levels3);
         //Текст дя диалогового окна - конец
 
         //Кнопка закрытия диалогового окна - начало

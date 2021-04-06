@@ -5,8 +5,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -17,10 +21,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.os.CountDownTimer;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
-import android.media.MediaPlayer;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +35,7 @@ import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
 
-public class Lavel6 extends AppCompatActivity {
+public class Lavel15 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogExit;
@@ -48,6 +48,7 @@ public class Lavel6 extends AppCompatActivity {
     public int count = 0; //Счётчик правельных ответов
     private final float maxVolume = 100.0f;
     private float currentVolume = 5.0f;
+
 
     MediaPlayer player;
     MediaPlayer player1;
@@ -62,7 +63,7 @@ public class Lavel6 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         //Рекламный банер - начало
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-6157182552660079~8128665018");
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-6157182552660079~8128665018");//заменить при релизе на настоящий
         adView = findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
@@ -75,7 +76,7 @@ public class Lavel6 extends AppCompatActivity {
 
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.lavel6); //Задали текст
+        text_levels.setText(R.string.lavel15); //Задали текст
 
         //Код для скругления углов у картинки
         final ImageView img_left = (ImageView) findViewById(R.id.img_left);
@@ -97,7 +98,7 @@ public class Lavel6 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Lavel6.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel15.this, GameLevels.class);
                     startActivity(intent); finish();
 
                     cTimer.cancel();
@@ -129,7 +130,7 @@ public class Lavel6 extends AppCompatActivity {
 
         //Картинка для диалогового окна - начало
         ImageView imgprev = (ImageView)dialog.findViewById(R.id.imgprev);
-        imgprev.setImageResource(R.drawable.img_prev_dialog6);
+        imgprev.setImageResource(R.drawable.img_prev_dialog15);
         //Картинка для диалогового окна - конец
 
         LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
@@ -137,11 +138,8 @@ public class Lavel6 extends AppCompatActivity {
 
         //Текст для диалогового окна - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-        textdescription.setText(R.string.levels6);
+        textdescription.setText(R.string.levels15);
         //Текст дя диалогового окна - конец
-
-
-
 
         //Кнопка закрытия диалогового окна - начало
         TextView btncloce = (TextView)dialog.findViewById(R.id.btncloce);
@@ -150,7 +148,7 @@ public class Lavel6 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     //Возвращение к выбору уровня
-                    Intent intent = new Intent(Lavel6.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel15.this, GameLevels.class);
                     startActivity(intent); finish();
 
                     cTimer.cancel();
@@ -168,6 +166,7 @@ public class Lavel6 extends AppCompatActivity {
 
         //Кнопка "Продолжить" - начало
 
+
         Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
         btncontinue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,7 +180,7 @@ public class Lavel6 extends AppCompatActivity {
                         }
 
                         public void onFinish() {
-                            Intent intent = new Intent(Lavel6.this, GameLevels.class);
+                            Intent intent = new Intent(Lavel15.this, GameLevels.class);
                             startActivity(intent);finish();
                             player.stop();
                         }
@@ -212,7 +211,7 @@ public class Lavel6 extends AppCompatActivity {
         dialogfonexit.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
 
         TextView textExit = (TextView)dialogExit.findViewById(R.id.dialogtextexit);
-        textExit.setText(R.string.dialogtextexit6);
+        textExit.setText(R.string.dialogtextexit15);
 
         //Кнопка закрытия диалогового окна - начало
 
@@ -222,7 +221,7 @@ public class Lavel6 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     //Возвращение к выбору уровня
-                    Intent intent = new Intent(Lavel6.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel15.this, GameLevels.class);
                     startActivity(intent); finish();
 
                     cTimer.cancel();
@@ -245,7 +244,7 @@ public class Lavel6 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent2 = new Intent(Lavel6.this, GameLevels.class);
+                    Intent intent2 = new Intent(Lavel15.this, GameLevels.class);
                     startActivity(intent2); finish();
 
                     cTimer.cancel();
@@ -272,7 +271,7 @@ public class Lavel6 extends AppCompatActivity {
         //Массив для заполнеия прогресса игры - конец
 
         //Подключаем анимацию - начало
-        final Animation a = AnimationUtils.loadAnimation(Lavel6.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Lavel15.this, R.anim.alpha);
         //Подключаем анимацию - конец
 
         //Звук ответа true - начало
@@ -287,8 +286,8 @@ public class Lavel6 extends AppCompatActivity {
 
         //Для левой части
         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-        img_left.setImageResource(array.images6[numLeft]); //Берём картинку из массива
-        text_left.setText(array.text6[numLeft]); //Берём из массива текст
+        img_left.setImageResource(array.images15[numLeft]); //Берём картинку из массива
+        text_left.setText(array.text15[numLeft]); //Берём из массива текст
 
         numRight = random.nextInt(21);
 
@@ -297,8 +296,8 @@ public class Lavel6 extends AppCompatActivity {
         }
 
         //Для правой части
-        img_right.setImageResource(array.images6[numRight]);
-        text_right.setText(array.text6[numRight]);
+        img_right.setImageResource(array.images15[numRight]);
+        text_right.setText(array.text15[numRight]);
 
         //Обрабатываем нажатие на левую картинку - начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -376,11 +375,11 @@ public class Lavel6 extends AppCompatActivity {
                         //Сохранение прогресса в игре
                         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
                         final int lavel = save.getInt("Lavel", 1);
-                        if (lavel > 6){
+                        if (lavel > 15){
 
                         }else{
                             SharedPreferences.Editor editor = save.edit();
-                            editor.putInt("Lavel", 7);
+                            editor.putInt("Lavel", 16);
                         }
 
                         //Выход из уровня
@@ -399,9 +398,9 @@ public class Lavel6 extends AppCompatActivity {
 
                     }else {
                         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-                        img_left.setImageResource(array.images6[numLeft]); //Берём картинку из массива
+                        img_left.setImageResource(array.images15[numLeft]); //Берём картинку из массива
                         img_left.startAnimation(a);
-                        text_left.setText(array.text6[numLeft]); //Берём из массива текст
+                        text_left.setText(array.text15[numLeft]); //Берём из массива текст
 
                         numRight = random.nextInt(21);
 
@@ -410,9 +409,9 @@ public class Lavel6 extends AppCompatActivity {
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images6[numRight]);
+                        img_right.setImageResource(array.images15[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.text6[numRight]);
+                        text_right.setText(array.text15[numRight]);
 
                         img_right.setEnabled(true);
                     }
@@ -501,11 +500,11 @@ public class Lavel6 extends AppCompatActivity {
                         //Сохранение прогресса в игре
                         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
                         final int lavel = save.getInt("Lavel", 1);
-                        if (lavel > 6){
+                        if (lavel > 15){
 
                         }else{
                             SharedPreferences.Editor editor = save.edit();
-                            editor.putInt("Lavel", 7);
+                            editor.putInt("Lavel", 16);
                         }
 
                         //Выход из уровня
@@ -524,9 +523,9 @@ public class Lavel6 extends AppCompatActivity {
 
                     }else {
                         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-                        img_left.setImageResource(array.images6[numLeft]); //Берём картинку из массива
+                        img_left.setImageResource(array.images15[numLeft]); //Берём картинку из массива
                         img_left.startAnimation(a);
-                        text_left.setText(array.text6[numLeft]); //Берём из массива текст
+                        text_left.setText(array.text15[numLeft]); //Берём из массива текст
 
                         numRight = random.nextInt(21);
 
@@ -535,9 +534,9 @@ public class Lavel6 extends AppCompatActivity {
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images6[numRight]);
+                        img_right.setImageResource(array.images15[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.text6[numRight]);
+                        text_right.setText(array.text15[numRight]);
 
                         img_left.setEnabled(true);
                     }

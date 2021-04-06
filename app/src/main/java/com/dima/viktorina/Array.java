@@ -457,4 +457,24 @@ public class Array {
             1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
     };
     //массив для 14 уровня конец
+
+    //Массив для 15 уровня начало
+    final int[] images15 = {
+            R.drawable.lavel15_dart, R.drawable.lavel15_matlab, R.drawable.lavel15_perl, R.drawable.lavel15_r,
+            R.drawable.lavel15_d, R.drawable.lavel15_vb, R.drawable.lavel15_assembly, R.drawable.lavel15_go,
+            R.drawable.lavel15_obg_c, R.drawable.lavel15_delphi, R.drawable.lavel15_ruby, R.drawable.lavel15_sql,
+            R.drawable.lavel15_swift, R.drawable.lavel15_php, R.drawable.lavel15_js, R.drawable.lavel15_vb_net,
+            R.drawable.lavel15_csharp, R.drawable.lavel15_cplusplus, R.drawable.lavel15_python, R.drawable.lavel15_c,
+            R.drawable.lavel15_java,
+    };
+
+    final int[] text15 = {
+            R.string.lvl15text1, R.string.lvl15text2, R.string.lvl15text3, R.string.lvl15text4,
+            R.string.lvl15text5, R.string.lvl15text6, R.string.lvl15text7, R.string.lvl15text8,
+            R.string.lvl15text9, R.string.lvl15text10, R.string.lvl15text11, R.string.lvl15text12,
+            R.string.lvl15text13, R.string.lvl15text14, R.string.lvl15text15, R.string.lvl15text16,
+            R.string.lvl15text17, R.string.lvl15text18, R.string.lvl15text19, R.string.lvl15text20,
+            R.string.lvl15text21,
+    };
+    //Массив для 15 уровня конец
 }

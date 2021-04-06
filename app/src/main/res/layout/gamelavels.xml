@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         app:fab_expandDirection="right"
         app:fab_addButtonSize="normal"
-        app:fab_addButtonColorNormal="@color/Purpl"
+        app:fab_addButtonColorNormal="@color/purple_200"
         android:layout_alignParentTop="true">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/floatingactionbutton0"
             app:fab_size="mini"
-            app:fab_colorNormal="@color/Purpl"
-            app:fab_colorPressed="@color/purple_200"
+            app:fab_colorNormal="@color/purple_200"
+            app:fab_colorPressed="@color/Purpl"
             app:fab_icon="@drawable/ic_baseline_close_24" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
@@ -45,8 +45,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/floatingactionbutton1"
             app:fab_size="mini"
-            app:fab_colorNormal="@color/Purpl"
-            app:fab_colorPressed="@color/purple_200"
+            app:fab_colorNormal="@color/purple_200"
+            app:fab_colorPressed="@color/Purpl"
             app:fab_icon="@drawable/ic_baseline_menu_24" />
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>

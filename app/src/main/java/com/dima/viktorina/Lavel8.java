@@ -137,7 +137,7 @@ public class Lavel8 extends AppCompatActivity {
 
         //Текст для диалогового окна - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-        textdescription.setText(R.string.levelseight);
+        textdescription.setText(R.string.levels8);
         //Текст дя диалогового окна - конец
 
         //Кнопка закрытия диалогового окна - начало

@@ -280,4 +280,26 @@
     <string name="lvl14text18">Осьминог</string>
     <string name="lvl14text19">Вобла</string>
     <string name="lvl14text20">Морская звезда</string>
+
+    <string name="lvl15text1">Dart</string>
+    <string name="lvl15text2">MATLAB</string>
+    <string name="lvl15text3">Perl</string>
+    <string name="lvl15text4">R</string>
+    <string name="lvl15text5">D</string>
+    <string name="lvl15text6">Visual Basic</string>
+    <string name="lvl15text7">Assembly language</string>
+    <string name="lvl15text8">Go</string>
+    <string name="lvl15text9">Objective-C</string>
+    <string name="lvl15text10">Delphi</string>
+    <string name="lvl15text11">Ruby</string>
+    <string name="lvl15text12">SQL</string>
+    <string name="lvl15text13">Swift</string>
+    <string name="lvl15text14">PHP</string>
+    <string name="lvl15text15">JavaScript</string>
+    <string name="lvl15text16">Visual Basic .NET</string>
+    <string name="lvl15text17">C#</string>
+    <string name="lvl15text18">C++</string>
+    <string name="lvl15text19">Python</string>
+    <string name="lvl15text20">C</string>
+    <string name="lvl15text21">Java</string>
 </resources>

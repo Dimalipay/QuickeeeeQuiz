@@ -139,7 +139,7 @@ public class Lavel11 extends AppCompatActivity {
 
         //Текст для диалогового окна - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-        textdescription.setText(R.string.levelseleven);
+        textdescription.setText(R.string.levels11);
         //Текст дя диалогового окна - конец
 
         //Кнопка закрытия диалогового окна - начало

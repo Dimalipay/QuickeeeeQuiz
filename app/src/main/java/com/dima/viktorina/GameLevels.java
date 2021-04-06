@@ -81,8 +81,8 @@ public class GameLevels extends AppCompatActivity {
             }
         });
 
-        TextView textView15 = (TextView) findViewById(R.id.textView15);
-        textView15.setOnClickListener(new View.OnClickListener() {
+        TextView textView16 = (TextView) findViewById(R.id.textView16);
+        textView16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -143,8 +143,8 @@ public class GameLevels extends AppCompatActivity {
             }
         });
 
-        TextView textView16 = (TextView) findViewById(R.id.textView16);
-        textView16.setOnClickListener(new View.OnClickListener() {
+        TextView textView17 = (TextView) findViewById(R.id.textView17);
+        textView17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -484,14 +484,39 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent14 = new Intent(GameLevels.this, Lavel14.class);
-                    startActivity(intent14); finish();
+                    //if (lavel>=14) {
+                        Intent intent14 = new Intent(GameLevels.this, Lavel14.class);
+                        startActivity(intent14);
+                        finish();
+                    //}else{
+
+                    //}
                 }catch (Exception e){
 
                 }
             }
         });
         //Кнопка 14 уровня - конец
+
+        //Кнопка 15 уровня - начало
+        TextView textView15 = (TextView)findViewById(R.id.textView15);
+        textView15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    //if (lavel>=15) {
+                    Intent intent15 = new Intent(GameLevels.this, Lavel15.class);
+                    startActivity(intent15);
+                    finish();
+                    //}else{
+
+                    //}
+                }catch (Exception e){
+
+                }
+            }
+        });
+        //Кнопка 15 уровня - конец
 
     }
 
