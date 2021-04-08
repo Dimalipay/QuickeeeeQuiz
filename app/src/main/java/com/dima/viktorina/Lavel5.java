@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -22,12 +23,19 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.media.MediaPlayer;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import java.util.Random;
 
@@ -48,6 +56,7 @@ public class Lavel5 extends AppCompatActivity {
     public int count = 0; //Счётчик правельных ответов
     private final float maxVolume = 100.0f;
     private float currentVolume = 5.0f;
+    private InterstitialAd mInterstitialAd;
 
     MediaPlayer player;
     MediaPlayer player1;
@@ -65,6 +74,27 @@ public class Lavel5 extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
         //Рекламный банер - конец
+
+        //Межстраничное объявление - начало
+        MobileAds.initialize(this, "ca-app-pub-6157182552660079~8128665018");
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-6157182552660079/4500411194");
+        AdRequest adRequest1 = new AdRequest.Builder().build();
+        mInterstitialAd.loadAd(adRequest1);
+
+
+        mInterstitialAd.setAdListener(new AdListener(){
+            @Override
+            public void onAdClosed() {
+                try {
+                    Intent intentad = new Intent(Lavel5.this, GameLevels.class);
+                    startActivity(intentad);finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+        //Межстраничное объявление - конец
 
         //Фоновая музыка - начало
         player = MediaPlayer.create(this, R.raw.track1);
@@ -220,14 +250,19 @@ public class Lavel5 extends AppCompatActivity {
         btncontinue2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    Intent intent2 = new Intent(Lavel5.this, GameLevels.class);
-                    startActivity(intent2); finish();
+                if (mInterstitialAd.isLoaded()){
+                    mInterstitialAd.show();
+                }else {
+                    try {
+                        Intent intent2 = new Intent(Lavel5.this, GameLevels.class);
+                        startActivity(intent2);
+                        finish();
 
-                    player.stop();
+                        player.stop();
 
-                }catch (Exception e){
+                    } catch (Exception e) {
 
+                    }
                 }
             }
         });
