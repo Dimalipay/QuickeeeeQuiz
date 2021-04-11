@@ -302,4 +302,26 @@
     <string name="lvl15text19">Python</string>
     <string name="lvl15text20">C</string>
     <string name="lvl15text21">Java</string>
+
+    <string name="lvl16text1">Пик Боливар</string>
+    <string name="lvl16text2">K2</string>
+    <string name="lvl16text3">Маунт-Рейнир</string>
+    <string name="lvl16text4">Гора Кинабалу</string>
+    <string name="lvl16text5">Намджагбарва</string>
+    <string name="lvl16text6">Чимборасо</string>
+    <string name="lvl16text7">Жениш Чокусу</string>
+    <string name="lvl16text8">Мауна-Кеа</string>
+    <string name="lvl16text9">Нанга-Парбат</string>
+    <string name="lvl16text10">Ключевская сопка</string>
+    <string name="lvl16text11">Гора Демавенд</string>
+    <string name="lvl16text12">Гора Монблан</string>
+    <string name="lvl16text13">Гора Эльбрус</string>
+    <string name="lvl16text14">Пунчак Джая</string>
+    <string name="lvl16text15">Массив Винсон</string>
+    <string name="lvl16text16">Пико-де-Орисаба</string>
+    <string name="lvl16text17">Гора Логан</string>
+    <string name="lvl16text18">Гора Килиманджаро</string>
+    <string name="lvl16text19">Гора Мак-Кинли</string>
+    <string name="lvl16text20">Гора Аконкагуа</string>
+    <string name="lvl16text21">Гора Эверест</string>
 </resources>

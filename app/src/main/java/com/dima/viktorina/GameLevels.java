@@ -55,14 +55,6 @@ public class GameLevels extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-       /* ImageButton imbtn = (ImageButton) findViewById(R.id.imageButton);
-        imbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopupMenu(v);
-            }
-        });*/
-
         floatingactionbutton0 = findViewById(R.id.floatingactionbutton0);
         floatingactionbutton0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,68 +70,6 @@ public class GameLevels extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_opt = new Intent(GameLevels.this, Menu_option.class);
                 startActivity(intent_opt);finish();
-            }
-        });
-
-        TextView textView16 = (TextView) findViewById(R.id.textView16);
-        textView16.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    //Вызов диалогового окна
-                    dialog = new Dialog(GameLevels.this); //Создаёт новое диалоговое окно
-                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //Скрываем шапку диалога
-                    dialog.setContentView(R.layout.dialog_prev); //Путь к макету
-                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //Прозрачный фон диалогового окна
-                    dialog.setCancelable(false); //Окно нельзя закрыть системными кнопками
-
-                    //Картинка для диалогового окна - начало
-                    ImageView imgprev = (ImageView)dialog.findViewById(R.id.imgprev);
-                    imgprev.setImageResource(R.drawable.warning_new);
-                    //Картинка для диалогового окна - конец
-
-                    LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
-                    dialogfon.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
-
-                    //Текст для диалогового окна - начало
-                    TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-                    textdescription.setText(R.string.warning);
-                    //Текст дя диалогового окна - конец
-
-                    //Кнопка закрытия диалогового окна - начало
-                    TextView btncloce = (TextView)dialog.findViewById(R.id.btncloce);
-                    btncloce.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            try {
-                                dialog.dismiss();
-                            }catch (Exception e){
-
-                            }
-                        }
-                    });
-                    //Кнопка закрытия диалогового окна - конец
-
-                    //Кнопка "Продолжить" - начало
-
-                    Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
-                    btncontinue.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            try {
-                                dialog.dismiss();
-                            }catch (Exception e){
-
-                            }
-                        }
-                    });
-
-                    //Кнопка "Продолжить" - конец
-
-                    dialog.show(); //Показ окна
-                }catch (Exception e){
-
-                }
             }
         });
 
@@ -997,6 +927,26 @@ public class GameLevels extends AppCompatActivity {
             }
         });
         //Кнопка 15 уровня - конец
+
+        //Кнопка 16 уровня - начало
+        TextView textView16 = (TextView)findViewById(R.id.textView16);
+        textView16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    //if (lavel>=15) {
+                    Intent intent16 = new Intent(GameLevels.this, Lavel16.class);
+                    startActivity(intent16);
+                    finish();
+                    //}else{
+
+                    //}
+                }catch (Exception e){
+
+                }
+            }
+        });
+        //Кнопка 16 уровня - конец
 
     }
 

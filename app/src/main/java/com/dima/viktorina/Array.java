@@ -477,4 +477,24 @@ public class Array {
             R.string.lvl15text21,
     };
     //Массив для 15 уровня конец
+
+    //Массив для 16 уровня начало
+    final int[] images16 = {
+            R.drawable.lavel16_picobolivar, R.drawable.lavel16_k2, R.drawable.lavel16_mountrainier, R.drawable.lavel16_kinabalu,
+            R.drawable.lavel16_namchabarwa, R.drawable.lavel16_chimborazo, R.drawable.lavel16_jengishchokusu, R.drawable.lavel16_maunakea,
+            R.drawable.lavel16_nangaparbat, R.drawable.lavel16_klyuchevskayasopka, R.drawable.lavel16_demavend, R.drawable.lavel16_montblanc,
+            R.drawable.lavel16_elbrus, R.drawable.lavel16_punchakjaya, R.drawable.lavel16_vinsonmassif, R.drawable.lavel16_picodeorizaba,
+            R.drawable.lavel16_mountlogan, R.drawable.lavel16_kilimanjaro, R.drawable.lavel16_mckinley, R.drawable.lavel16_aconcagua,
+            R.drawable.lavel16_everest,
+    };
+
+    final int[] text16 = {
+            R.string.lvl16text1, R.string.lvl16text2, R.string.lvl16text3, R.string.lvl16text4,
+            R.string.lvl16text5, R.string.lvl16text6, R.string.lvl16text7, R.string.lvl16text8,
+            R.string.lvl16text9, R.string.lvl16text10, R.string.lvl16text11, R.string.lvl16text12,
+            R.string.lvl16text13, R.string.lvl16text14, R.string.lvl16text15, R.string.lvl16text16,
+            R.string.lvl16text17, R.string.lvl16text18, R.string.lvl16text19, R.string.lvl16text20,
+            R.string.lvl16text21,
+    };
+    //Массив для 16 уровня конец
 }
