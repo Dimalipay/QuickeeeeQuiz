@@ -379,7 +379,7 @@ public class Lavel17 extends AppCompatActivity {
                             if (count == 1){
                               count = 0;
                             }else{
-                                count = count + 1;
+                                count = count - 2;
                             }
                         }
                         //Закрашиваем прогресс серым светом - начало
@@ -504,7 +504,7 @@ public class Lavel17 extends AppCompatActivity {
                             if (count == 1){
                                 count = 0;
                             }else{
-                                count = count + 1;
+                                count = count - 2;
                             }
                         }
                         //Закрашиваем прогресс серым светом - начало
