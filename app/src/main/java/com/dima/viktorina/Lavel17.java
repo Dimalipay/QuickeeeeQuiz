@@ -37,7 +37,7 @@ import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
 
-public class Lavel16 extends AppCompatActivity {
+public class Lavel17 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogExit;
@@ -71,7 +71,7 @@ public class Lavel16 extends AppCompatActivity {
         adView.loadAd(adRequest);
         //Рекламный банер - конец
 
-        /*//Межстраничное объявление - начало
+        //Межстраничное объявление - начало
         MobileAds.initialize(this, "ca-app-pub-6157182552660079~8128665018");
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-6157182552660079/4500411194");
@@ -82,14 +82,14 @@ public class Lavel16 extends AppCompatActivity {
             @Override
             public void onAdClosed() {
                 try {
-                    Intent intentad = new Intent(Lavel16.this, GameLevels.class);
+                    Intent intentad = new Intent(Lavel17.this, GameLevels.class);
                     startActivity(intentad);finish();
                 }catch (Exception e){
 
                 }
             }
         });
-        //Межстраничное объявление - конец*/
+        //Межстраничное объявление - конец
 
         //Фоновая музыка - начало
         player = MediaPlayer.create(this, R.raw.track1);
@@ -98,7 +98,7 @@ public class Lavel16 extends AppCompatActivity {
 
         //Создаём переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.lavel16); //Задали текст
+        text_levels.setText(R.string.lavel17); //Задали текст
 
         //Код для скругления углов у картинки
         final ImageView img_left = (ImageView) findViewById(R.id.img_left);
@@ -120,7 +120,7 @@ public class Lavel16 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Lavel16.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel17.this, GameLevels.class);
                     startActivity(intent); finish();
 
                     cTimer.cancel();
@@ -152,7 +152,7 @@ public class Lavel16 extends AppCompatActivity {
 
         //Картинка для диалогового окна - начало
         ImageView imgprev = (ImageView)dialog.findViewById(R.id.imgprev);
-        imgprev.setImageResource(R.drawable.img_prev_dialog16);
+        imgprev.setImageResource(R.drawable.img_prev_dialog17);
         //Картинка для диалогового окна - конец
 
         LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
@@ -160,7 +160,7 @@ public class Lavel16 extends AppCompatActivity {
 
         //Текст для диалогового окна - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-        textdescription.setText(R.string.levels16);
+        textdescription.setText(R.string.levels17);
         //Текст дя диалогового окна - конец
 
         //Кнопка закрытия диалогового окна - начало
@@ -170,7 +170,7 @@ public class Lavel16 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     //Возвращение к выбору уровня
-                    Intent intent = new Intent(Lavel16.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel17.this, GameLevels.class);
                     startActivity(intent); finish();
 
                     cTimer.cancel();
@@ -202,7 +202,7 @@ public class Lavel16 extends AppCompatActivity {
                         }
 
                         public void onFinish() {
-                            Intent intent = new Intent(Lavel16.this, GameLevels.class);
+                            Intent intent = new Intent(Lavel17.this, GameLevels.class);
                             startActivity(intent);finish();
                             player.stop();
                         }
@@ -233,7 +233,7 @@ public class Lavel16 extends AppCompatActivity {
         dialogfonexit.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
 
         TextView textExit = (TextView)dialogExit.findViewById(R.id.dialogtextexit);
-        textExit.setText(R.string.dialogtextexit16);
+        textExit.setText(R.string.dialogtextexit17);
 
         //Кнопка закрытия диалогового окна - начало
 
@@ -243,7 +243,7 @@ public class Lavel16 extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     //Возвращение к выбору уровня
-                    Intent intent = new Intent(Lavel16.this, GameLevels.class);
+                    Intent intent = new Intent(Lavel17.this, GameLevels.class);
                     startActivity(intent); finish();
 
                     cTimer.cancel();
@@ -265,11 +265,11 @@ public class Lavel16 extends AppCompatActivity {
         btncontinue2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //if (mInterstitialAd.isLoaded()){
-                    //mInterstitialAd.show();
-                //}else {
+                if (mInterstitialAd.isLoaded()){
+                    mInterstitialAd.show();
+                }else {
                     try {
-                        Intent intent2 = new Intent(Lavel16.this, GameLevels.class);
+                        Intent intent2 = new Intent(Lavel17.this, GameLevels.class);
                         startActivity(intent2);
                         finish();
 
@@ -279,7 +279,7 @@ public class Lavel16 extends AppCompatActivity {
 
                     } catch (Exception e) {
 
-                    //}
+                    }
                 }
             }
         });
@@ -298,7 +298,7 @@ public class Lavel16 extends AppCompatActivity {
         //Массив для заполнеия прогресса игры - конец
 
         //Подключаем анимацию - начало
-        final Animation a = AnimationUtils.loadAnimation(Lavel16.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Lavel17.this, R.anim.alpha);
         //Подключаем анимацию - конец
 
         //Звук ответа true - начало
@@ -313,8 +313,8 @@ public class Lavel16 extends AppCompatActivity {
 
         //Для левой части
         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-        img_left.setImageResource(array.images16[numLeft]); //Берём картинку из массива
-        text_left.setText(array.text16[numLeft]); //Берём из массива текст
+        img_left.setImageResource(array.images17[numLeft]); //Берём картинку из массива
+        text_left.setText(array.text17[numLeft]); //Берём из массива текст
 
         numRight = random.nextInt(21);
 
@@ -323,8 +323,8 @@ public class Lavel16 extends AppCompatActivity {
         }
 
         //Для правой части
-        img_right.setImageResource(array.images16[numRight]);
-        text_right.setText(array.text16[numRight]);
+        img_right.setImageResource(array.images17[numRight]);
+        text_right.setText(array.text17[numRight]);
 
         //Обрабатываем нажатие на левую картинку - начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -402,18 +402,18 @@ public class Lavel16 extends AppCompatActivity {
                         //Сохранение прогресса в игре
                         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
                         final int lavel = save.getInt("Lavel", 1);
-                        if (lavel > 16){
+                        if (lavel > 17){
 
                         }else{
                             SharedPreferences.Editor editor = save.edit();
-                            editor.putInt("Lavel", 17);
+                            editor.putInt("Lavel", 18);
                         }
 
                         //Выход из уровня
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);
                         konfettiView.build()
-                                .addColors(Color.CYAN, Color.WHITE, Color.BLUE)
+                                .addColors(Color.GREEN, Color.YELLOW, Color.BLUE)
                                 .setDirection(0.0, 359.0)
                                 .setSpeed(1f, 5f)
                                 .setFadeOutEnabled(true)
@@ -425,9 +425,9 @@ public class Lavel16 extends AppCompatActivity {
 
                     }else {
                         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-                        img_left.setImageResource(array.images16[numLeft]); //Берём картинку из массива
+                        img_left.setImageResource(array.images17[numLeft]); //Берём картинку из массива
                         img_left.startAnimation(a);
-                        text_left.setText(array.text16[numLeft]); //Берём из массива текст
+                        text_left.setText(array.text17[numLeft]); //Берём из массива текст
 
                         numRight = random.nextInt(21);
 
@@ -436,9 +436,9 @@ public class Lavel16 extends AppCompatActivity {
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images16[numRight]);
+                        img_right.setImageResource(array.images17[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.text16[numRight]);
+                        text_right.setText(array.text17[numRight]);
 
                         img_right.setEnabled(true);
                     }
@@ -527,18 +527,18 @@ public class Lavel16 extends AppCompatActivity {
                         //Сохранение прогресса в игре
                         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
                         final int lavel = save.getInt("Lavel", 1);
-                        if (lavel > 16){
+                        if (lavel > 17){
 
                         }else{
                             SharedPreferences.Editor editor = save.edit();
-                            editor.putInt("Lavel", 17);
+                            editor.putInt("Lavel", 18);
                         }
 
                         //Выход из уровня
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);
                         konfettiView.build()
-                                .addColors(Color.CYAN, Color.WHITE, Color.BLUE)
+                                .addColors(Color.GREEN, Color.YELLOW, Color.BLUE)
                                 .setDirection(0.0, 359.0)
                                 .setSpeed(1f, 5f)
                                 .setFadeOutEnabled(true)
@@ -550,9 +550,9 @@ public class Lavel16 extends AppCompatActivity {
 
                     }else {
                         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-                        img_left.setImageResource(array.images16[numLeft]); //Берём картинку из массива
+                        img_left.setImageResource(array.images17[numLeft]); //Берём картинку из массива
                         img_left.startAnimation(a);
-                        text_left.setText(array.text16[numLeft]); //Берём из массива текст
+                        text_left.setText(array.text17[numLeft]); //Берём из массива текст
 
                         numRight = random.nextInt(21);
 
@@ -561,9 +561,9 @@ public class Lavel16 extends AppCompatActivity {
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images16[numRight]);
+                        img_right.setImageResource(array.images17[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.text16[numRight]);
+                        text_right.setText(array.text17[numRight]);
 
                         img_left.setEnabled(true);
                     }

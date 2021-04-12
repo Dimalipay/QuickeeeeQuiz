@@ -497,4 +497,24 @@ public class Array {
             R.string.lvl16text21,
     };
     //Массив для 16 уровня конец
+
+    //Массив для 17 уровня начало
+    final int[] images17 = {
+            R.drawable.lavel17_don,  R.drawable.lavel17_ogau,  R.drawable.lavel17_dnepr,  R.drawable.lavel17_dunai,
+            R.drawable.lavel17_narun,  R.drawable.lavel17_sanfrancisku,  R.drawable.lavel17_evrat,  R.drawable.lavel17_aragua,
+            R.drawable.lavel17_ukon,  R.drawable.lavel17_volga,  R.drawable.lavel17_makenzi,  R.drawable.lavel17_mekong,
+            R.drawable.lavel17_laplata,  R.drawable.lavel17_amur,  R.drawable.lavel17_lena,  R.drawable.lavel17_eniseu,
+            R.drawable.lavel17_ob,  R.drawable.lavel17_huanhe,  R.drawable.lavel17_yangtze,  R.drawable.lavel17_nil,
+            R.drawable.lavel17_amazonka,
+    };
+
+    final int[] text17 = {
+            R.string.lvl17text1, R.string.lvl17text2, R.string.lvl17text3, R.string.lvl17text4,
+            R.string.lvl17text5, R.string.lvl17text6, R.string.lvl17text7, R.string.lvl17text8,
+            R.string.lvl17text9, R.string.lvl17text10, R.string.lvl17text11, R.string.lvl17text12,
+            R.string.lvl17text13, R.string.lvl17text14, R.string.lvl17text15, R.string.lvl17text16,
+            R.string.lvl17text17, R.string.lvl17text18, R.string.lvl17text19, R.string.lvl17text20,
+            R.string.lvl17text21,
+    };
+    //Массив для 17 уровня конец
 }

@@ -324,4 +324,26 @@
     <string name="lvl16text19">Гора Мак-Кинли</string>
     <string name="lvl16text20">Гора Аконкагуа</string>
     <string name="lvl16text21">Гора Эверест</string>
+
+    <string name="lvl17text1">Дон</string>
+    <string name="lvl17text2">Огайо</string>
+    <string name="lvl17text3">Днепр</string>
+    <string name="lvl17text4">Дунай</string>
+    <string name="lvl17text5">Нарын</string>
+    <string name="lvl17text6">Сан-Франсиску</string>
+    <string name="lvl17text7">Евфрат</string>
+    <string name="lvl17text8">Арагуая</string>
+    <string name="lvl17text9">Юкон</string>
+    <string name="lvl17text10">Волга</string>
+    <string name="lvl17text11">Маккензи</string>
+    <string name="lvl17text12">Меконг</string>
+    <string name="lvl17text13">Ла-Плата</string>
+    <string name="lvl17text14">Амур</string>
+    <string name="lvl17text15">Лена</string>
+    <string name="lvl17text16">Енисей</string>
+    <string name="lvl17text17">Обь</string>
+    <string name="lvl17text18">Хуанхэ</string>
+    <string name="lvl17text19">Янцзы</string>
+    <string name="lvl17text20">Нил</string>
+    <string name="lvl17text21">Амазонка</string>
 </resources>
