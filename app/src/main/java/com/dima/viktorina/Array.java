@@ -517,4 +517,56 @@ public class Array {
             R.string.lvl17text21,
     };
     //Массив для 17 уровня конец
+
+    //Массив для 18 уровня начало
+    final int[] images18 = {
+            R.drawable.lavel18_asai,
+            R.drawable.lavel18_apricot,
+            R.drawable.lavel18_barberry,
+            R.drawable.lavel18_avokado,
+            R.drawable.lavel18_blackberry,
+            R.drawable.lavel18_figs,
+            R.drawable.lavel18_currant,
+            R.drawable.lavel18_garnet,
+            R.drawable.lavel18_gooseberry,
+            R.drawable.lavel18_lychee,
+            R.drawable.lavel18_grapes,
+            R.drawable.lavel18_mango,
+            R.drawable.lavel18_raspberries,
+            R.drawable.lavel18_passionfruit,
+            R.drawable.lavel18_rosehip,
+            R.drawable.lavel18_peach,
+            R.drawable.lavel18_seabuckthorn,
+            R.drawable.lavel18_persimmon,
+            R.drawable.lavel18_tomato,
+            R.drawable.lavel18_rambutan,
+    };
+
+    final int[] text18 = {
+            R.string.lvl18text1,
+            R.string.lvl18text2,
+            R.string.lvl18text3,
+            R.string.lvl18text4,
+            R.string.lvl18text5,
+            R.string.lvl18text6,
+            R.string.lvl18text7,
+            R.string.lvl18text8,
+            R.string.lvl18text9,
+            R.string.lvl18text10,
+            R.string.lvl18text11,
+            R.string.lvl18text12,
+            R.string.lvl18text13,
+            R.string.lvl18text14,
+            R.string.lvl18text15,
+            R.string.lvl18text16,
+            R.string.lvl18text17,
+            R.string.lvl18text18,
+            R.string.lvl18text19,
+            R.string.lvl18text20,
+    };
+
+    final int[] strotg18 = {
+            1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+    };
+    //Массив для 18 уровня конец
 }

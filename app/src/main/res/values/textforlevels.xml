@@ -346,4 +346,25 @@
     <string name="lvl17text19">Янцзы</string>
     <string name="lvl17text20">Нил</string>
     <string name="lvl17text21">Амазонка</string>
+
+    <string name="lvl18text1">Асиа</string>
+    <string name="lvl18text2">Абрикос</string>
+    <string name="lvl18text3">Барбарис</string>
+    <string name="lvl18text4">Авокадо</string>
+    <string name="lvl18text5">Ежевика</string>
+    <string name="lvl18text6">Инжир</string>
+    <string name="lvl18text7">Красная смородина</string>
+    <string name="lvl18text8">Гранат</string>
+    <string name="lvl18text9">Крыжовник</string>
+    <string name="lvl18text10">Личи</string>
+    <string name="lvl18text11">Виноград</string>
+    <string name="lvl18text12">Манго</string>
+    <string name="lvl18text13">Малина</string>
+    <string name="lvl18text14">Маракуйя</string>
+    <string name="lvl18text15">Шиповник</string>
+    <string name="lvl18text16">Персик</string>
+    <string name="lvl18text17">Облепиха</string>
+    <string name="lvl18text18">Хурма</string>
+    <string name="lvl18text19">Помидор</string>
+    <string name="lvl18text20">Рамбутан</string>
 </resources>
