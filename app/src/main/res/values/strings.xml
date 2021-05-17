@@ -40,4 +40,6 @@
     <string name="lavel23">Уровень 23</string>
     <string name="lavel24">Уровень 24</string>
     <string name="lavel25">Уровень 25</string>
+    <string name="textfinish">Поздравляю, игра пройдена!</string>
+    <string name="backmenu">Вернуться в меню</string>
 </resources>
