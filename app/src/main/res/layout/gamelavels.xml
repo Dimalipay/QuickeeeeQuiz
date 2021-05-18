@@ -376,6 +376,7 @@
             android:layout_marginBottom="40dp"
             android:background="@drawable/style_btn_main"
             android:text="@string/back"
+            android:textSize="10sp"
             android:textColor="@color/white" />
 
         <com.google.android.gms.ads.AdView
