@@ -277,12 +277,12 @@ public class Lavel18 extends AppCompatActivity {
 
         //Звук ответа true - начало
         player1 = MediaPlayer.create(this, R.raw.true1);
-        player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+        player1.setVolume(0, 0);
         //Звук ответа true - конец
 
         //Звук ответа false - начало
         player2 = MediaPlayer.create(this, R.raw.false1);
-        player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+        player2.setVolume(0, 0);
         //Звук ответа false - конец
 
         //Для левой части
@@ -310,6 +310,7 @@ public class Lavel18 extends AppCompatActivity {
                    img_right.setEnabled(false); //Блокируем правую картинку что бы не допустить нажатия на обе сразу
                    if (array.strotg[numLeft] > array.strotg[numRight]){
                        img_left.setImageResource(R.drawable.lvl1true);
+                       player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
                        player1.start();
                        if (Build.VERSION.SDK_INT >= 26) {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
@@ -317,6 +318,8 @@ public class Lavel18 extends AppCompatActivity {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(50);
                        }
                    }else{
+                       player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+                       player2.start();
                        img_left.setImageResource(R.drawable.lvl1false);
                        if (Build.VERSION.SDK_INT >= 26) {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
@@ -432,6 +435,7 @@ public class Lavel18 extends AppCompatActivity {
                     img_left.setEnabled(false); //Блокируем лувую картинку что бы не допустить нажатия на обе сразу
                     if (array.strotg[numLeft] < array.strotg[numRight]){
                         img_right.setImageResource(R.drawable.lvl1true);
+                        player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
                         player1.start();
                         if (Build.VERSION.SDK_INT >= 26) {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,10));
@@ -440,6 +444,7 @@ public class Lavel18 extends AppCompatActivity {
                         }
                     }else{
                         img_right.setImageResource(R.drawable.lvl1false);
+                        player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
                         player2.start();
                         if (Build.VERSION.SDK_INT >= 26) {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));

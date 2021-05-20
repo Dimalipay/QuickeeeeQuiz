@@ -569,4 +569,24 @@ public class Array {
             1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
     };
     //Массив для 18 уровня конец
+
+    //Массив для 17 уровня начало
+    final int[] images19 = {
+            R.drawable.lavel19_upper, R.drawable.lavel19_victoria, R.drawable.lavel19_huron, R.drawable.lavel19_michigan,
+            R.drawable.lavel19_tanganyika, R.drawable.lavel19_baikal, R.drawable.lavel19_big_bearish, R.drawable.lavel19_nyasa,
+            R.drawable.lavel19_big_slave, R.drawable.lavel19_erie, R.drawable.lavel19_winnipeg, R.drawable.lavel19_ontario,
+            R.drawable.lavel19_balkhash, R.drawable.lavel19_ladoga, R.drawable.lavel19_maracaibo, R.drawable.lavel19_onega,
+            R.drawable.lavel19_athabasca, R.drawable.lavel19_deer, R.drawable.lavel19_erie, R.drawable.lavel19_urmia,
+            R.drawable.lavel19_dongtinghu,
+    };
+
+    final int[] text19 = {
+            R.string.lvl19text1, R.string.lvl19text2, R.string.lvl19text3, R.string.lvl19text4,
+            R.string.lvl19text5, R.string.lvl19text6, R.string.lvl19text7, R.string.lvl19text8,
+            R.string.lvl19text9, R.string.lvl19text10, R.string.lvl19text11, R.string.lvl19text12,
+            R.string.lvl19text13, R.string.lvl19text14, R.string.lvl19text15, R.string.lvl19text16,
+            R.string.lvl19text17, R.string.lvl19text18, R.string.lvl19text19, R.string.lvl19text20,
+            R.string.lvl19text21,
+    };
+    //Массив для 17 уровня конец
 }

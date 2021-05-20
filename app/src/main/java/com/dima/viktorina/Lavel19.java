@@ -152,7 +152,7 @@ public class Lavel19 extends AppCompatActivity {
 
         //Картинка для диалогового окна - начало
         ImageView imgprev = (ImageView)dialog.findViewById(R.id.imgprev);
-        imgprev.setImageResource(R.drawable.img_prev_dialog17);
+        imgprev.setImageResource(R.drawable.img_prev_dialog19);
         //Картинка для диалогового окна - конец
 
         LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
@@ -160,7 +160,7 @@ public class Lavel19 extends AppCompatActivity {
 
         //Текст для диалогового окна - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.dialogtext);
-        textdescription.setText(R.string.levels17);
+        textdescription.setText(R.string.levels19);
         //Текст дя диалогового окна - конец
 
         //Кнопка закрытия диалогового окна - начало
@@ -196,7 +196,7 @@ public class Lavel19 extends AppCompatActivity {
                 try {
                     dialog.dismiss();
 
-                    cTimer = new CountDownTimer(90000, 1000) {
+                    cTimer = new CountDownTimer(80000, 1000) {
                         public void onTick(long millisUntilFinished) {
                             mTimer.setText("Осталось времени: " + millisUntilFinished / 1000 + " секунд");
                         }
@@ -233,7 +233,7 @@ public class Lavel19 extends AppCompatActivity {
         dialogfonexit.setBackgroundResource(R.drawable.prev_dialog_bg_lavel4);
 
         TextView textExit = (TextView)dialogExit.findViewById(R.id.dialogtextexit);
-        textExit.setText(R.string.dialogtextexit17);
+        textExit.setText(R.string.dialogtextexit19);
 
         //Кнопка закрытия диалогового окна - начало
 
@@ -303,18 +303,18 @@ public class Lavel19 extends AppCompatActivity {
 
         //Звук ответа true - начало
         player1 = MediaPlayer.create(this, R.raw.true1);
-        player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+        player1.setVolume(0, 0);
         //Звук ответа true - конец
 
         //Звук ответа false - начало
         player2 = MediaPlayer.create(this, R.raw.false1);
-        player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
+        player2.setVolume(0, 0);
         //Звук ответа false - конец
 
         //Для левой части
         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-        img_left.setImageResource(array.images17[numLeft]); //Берём картинку из массива
-        text_left.setText(array.text17[numLeft]); //Берём из массива текст
+        img_left.setImageResource(array.images19[numLeft]); //Берём картинку из массива
+        text_left.setText(array.text19[numLeft]); //Берём из массива текст
 
         numRight = random.nextInt(21);
 
@@ -323,8 +323,8 @@ public class Lavel19 extends AppCompatActivity {
         }
 
         //Для правой части
-        img_right.setImageResource(array.images17[numRight]);
-        text_right.setText(array.text17[numRight]);
+        img_right.setImageResource(array.images19[numRight]);
+        text_right.setText(array.text19[numRight]);
 
         //Обрабатываем нажатие на левую картинку - начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -335,16 +335,18 @@ public class Lavel19 extends AppCompatActivity {
                     //Если коснулся картинки - начало
                    img_right.setEnabled(false); //Блокируем правую картинку что бы не допустить нажатия на обе сразу
                    if (numLeft > numRight){
-                       img_left.setImageResource(R.drawable.lvl1true);
+                       player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
                        player1.start();
+                       img_left.setImageResource(R.drawable.lvl1true);
                        if (Build.VERSION.SDK_INT >= 26) {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
                        } else {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(50);
                        }
                    }else{
-                       img_left.setImageResource(R.drawable.lvl1false);
+                       player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
                        player2.start();
+                       img_left.setImageResource(R.drawable.lvl1false);
                        if (Build.VERSION.SDK_INT >= 26) {
                            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
                        } else {
@@ -413,7 +415,7 @@ public class Lavel19 extends AppCompatActivity {
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);
                         konfettiView.build()
-                                .addColors(Color.GREEN, Color.YELLOW, Color.BLUE)
+                                .addColors(Color.RED, Color.BLUE, Color.YELLOW)
                                 .setDirection(0.0, 359.0)
                                 .setSpeed(1f, 5f)
                                 .setFadeOutEnabled(true)
@@ -425,9 +427,9 @@ public class Lavel19 extends AppCompatActivity {
 
                     }else {
                         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-                        img_left.setImageResource(array.images17[numLeft]); //Берём картинку из массива
+                        img_left.setImageResource(array.images19[numLeft]); //Берём картинку из массива
                         img_left.startAnimation(a);
-                        text_left.setText(array.text17[numLeft]); //Берём из массива текст
+                        text_left.setText(array.text19[numLeft]); //Берём из массива текст
 
                         numRight = random.nextInt(21);
 
@@ -436,9 +438,9 @@ public class Lavel19 extends AppCompatActivity {
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images17[numRight]);
+                        img_right.setImageResource(array.images19[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.text17[numRight]);
+                        text_right.setText(array.text19[numRight]);
 
                         img_right.setEnabled(true);
                     }
@@ -460,16 +462,18 @@ public class Lavel19 extends AppCompatActivity {
                     //Если коснулся картинки - начало
                     img_left.setEnabled(false); //Блокируем лувую картинку что бы не допустить нажатия на обе сразу
                     if (numLeft < numRight){
-                        img_right.setImageResource(R.drawable.lvl1true);
+                        player1.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
                         player1.start();
+                        img_right.setImageResource(R.drawable.lvl1true);
                         if (Build.VERSION.SDK_INT >= 26) {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(50,50));
                         } else {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(50);
                         }
                     }else{
-                        img_right.setImageResource(R.drawable.lvl1false);
+                        player2.setVolume(currentVolume / maxVolume, currentVolume / maxVolume);
                         player2.start();
+                        img_right.setImageResource(R.drawable.lvl1false);
                         if (Build.VERSION.SDK_INT >= 26) {
                             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(250,200));
                         } else {
@@ -538,7 +542,7 @@ public class Lavel19 extends AppCompatActivity {
                         dialogExit.show();
                         final KonfettiView konfettiView = findViewById(R.id.konfetti);
                         konfettiView.build()
-                                .addColors(Color.GREEN, Color.YELLOW, Color.BLUE)
+                                .addColors(Color.RED, Color.BLUE, Color.YELLOW)
                                 .setDirection(0.0, 359.0)
                                 .setSpeed(1f, 5f)
                                 .setFadeOutEnabled(true)
@@ -550,9 +554,9 @@ public class Lavel19 extends AppCompatActivity {
 
                     }else {
                         numLeft = random.nextInt(21); //Генерация случайных чисел от 1 до 21
-                        img_left.setImageResource(array.images17[numLeft]); //Берём картинку из массива
+                        img_left.setImageResource(array.images19[numLeft]); //Берём картинку из массива
                         img_left.startAnimation(a);
-                        text_left.setText(array.text17[numLeft]); //Берём из массива текст
+                        text_left.setText(array.text19[numLeft]); //Берём из массива текст
 
                         numRight = random.nextInt(21);
 
@@ -561,9 +565,9 @@ public class Lavel19 extends AppCompatActivity {
                         }
 
                         //Для правой части
-                        img_right.setImageResource(array.images17[numRight]);
+                        img_right.setImageResource(array.images19[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.text17[numRight]);
+                        text_right.setText(array.text19[numRight]);
 
                         img_left.setEnabled(true);
                     }

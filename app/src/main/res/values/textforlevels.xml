@@ -367,4 +367,26 @@
     <string name="lvl18text18">Хурма</string>
     <string name="lvl18text19">Помидор</string>
     <string name="lvl18text20">Рамбутан</string>
+
+    <string name="lvl19text1">Верхнее</string>
+    <string name="lvl19text2">Виктория</string>
+    <string name="lvl19text3">Гурон</string>
+    <string name="lvl19text4">Мичиган</string>
+    <string name="lvl19text5">Танганьика</string>
+    <string name="lvl19text6">Байкал</string>
+    <string name="lvl19text7">Большое Медвежье</string>
+    <string name="lvl19text8">Ньяса</string>
+    <string name="lvl19text9">Большое Невольничье</string>
+    <string name="lvl19text10">Эри</string>
+    <string name="lvl19text11">Виннипег</string>
+    <string name="lvl19text12">Онтарио</string>
+    <string name="lvl19text13">Балхаш</string>
+    <string name="lvl19text14">Ладожское</string>
+    <string name="lvl19text15">Маракайбо</string>
+    <string name="lvl19text16">Онежское</string>
+    <string name="lvl19text17">Атабаска</string>
+    <string name="lvl19text18">Оленье</string>
+    <string name="lvl19text19">Эйр</string>
+    <string name="lvl19text20">Урмия</string>
+    <string name="lvl19text21">Дунтинху</string>
 </resources>
