@@ -23,3 +23,6 @@ After passing the level, falling candies will appear in the background, as well 
 Also in the game there is vibration when you click on the correct and incorrect answer, differing in their intensity. There is also background music to relax the user (no copyright music). I would also like to note that if the user for some reason has not passed all the levels, his progress will be saved.
 After that, the user has gone through all 20 levels in front of him, a screen will appear with congratulations on the passage of the game.
 ![Screenshot_20210701-232106_QuickeeeeQuiz](https://user-images.githubusercontent.com/59018353/124185694-f216f200-dac3-11eb-9da7-3d1060498e0e.png)
+
+
+For all questions write to the mail: lipay.dima@gmail.com
